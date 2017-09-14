@@ -1,0 +1,625 @@
+262839652 2017-06-26 11:12:37.140 [http-bio-7777-exec-40] DEBUG c.z.z.core.i18n.I18NThreadContext-  i18nthreadContext setting localeName en ThreadName=http-bio-7777-exec-40
+262839652 2017-06-26 11:12:37.140 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, enter sessionFilter doFilter
+262839652 2017-06-26 11:12:37.140 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, isDevelopMode-->false
+262839653 2017-06-26 11:12:37.141 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, requestStr-->http://10.45.53.207:7777/cvbs/messagebroker/amf
+262839653 2017-06-26 11:12:37.141 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, HTTP Header :referer-->http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3
+262839653 2017-06-26 11:12:37.141 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- Thread [http-bio-7777-exec-40] registered remoteIp [10.45.22.52]
+262839653 2017-06-26 11:12:37.141 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- [Lid:10.45.22.52-1384]  Thread [http-bio-7777-exec-40] registered loggingId [10.45.22.52-1384]
+262839653 2017-06-26 11:12:37.141 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.util.SystemParam- [Lid:10.45.22.52-1384]  get system parameter from cache. mask = USERONLINE_UPDATETIME, value = 60
+262839653 2017-06-26 11:12:37.141 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1384]  begin http call service!
+262839655 2017-06-26 11:12:37.143 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.invoke.InvokeNativeService- [Lid:10.45.22.52-1384]  database env is:[dbBackService]
+262839655 2017-06-26 11:12:37.143 [http-bio-7777-exec-40] DEBUG c.z.z.b.b.s.b.GetRoutingByInstanceService- [Lid:10.45.22.52-1384]  routing id array is: [-1]
+262839656 2017-06-26 11:12:37.144 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.i.ServiceLoggingInterceptor- [Lid:10.45.22.52-1384]  
+[Req Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>GetRoutingByInstanceService</ServiceName>
+  <Data>
+    <ICCID_BEGIN>20812222111</ICCID_BEGIN>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <ICCID_END>20812222111</ICCID_END>
+    <userIDInfo>23</userIDInfo>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <ROUTING_ID_ARRAY>[Ljava.lang.Long;@6dbc641a</ROUTING_ID_ARRAY>
+    <SIM_TYPE_ID>1</SIM_TYPE_ID>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <JOB_ID>1</JOB_ID>
+    <APP_ID>1</APP_ID>
+    <ORG_ID>1</ORG_ID>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <SP_ID>0</SP_ID>
+    <LANG_CODE>en</LANG_CODE>
+    <IS_LOGGED_1220>false</IS_LOGGED_1220>
+    <QUANTITY>1</QUANTITY>
+  </Data>
+</zsmart>
+
+[Rsp Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>GetRoutingByInstanceService</ServiceName>
+  <Data>
+    <ICCID_BEGIN>20812222111</ICCID_BEGIN>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <ICCID_END>20812222111</ICCID_END>
+    <userIDInfo>23</userIDInfo>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <ROUTING_ID_ARRAY>[Ljava.lang.Long;@5933567c</ROUTING_ID_ARRAY>
+    <SIM_TYPE_ID>1</SIM_TYPE_ID>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <JOB_ID>1</JOB_ID>
+    <APP_ID>1</APP_ID>
+    <ORG_ID>1</ORG_ID>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <SP_ID>0</SP_ID>
+    <LANG_CODE>en</LANG_CODE>
+    <IS_LOGGED_1220>true</IS_LOGGED_1220>
+    <QUANTITY>1</QUANTITY>
+  </Data>
+</zsmart>
+
+
+262839656 2017-06-26 11:12:37.144 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1384]  end http call service!
+262839656 2017-06-26 11:12:37.144 [http-bio-7777-exec-40] DEBUG c.z.z.core.jdbc.ds.route.TlDbRtLtEvn- [Lid:10.45.22.52-1384]  DbRoutingEvn begin,envId is DBRT06111237000001000000,routingId is:[1]
+262839656 2017-06-26 11:12:37.144 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1384]  begin http call service!
+262839657 2017-06-26 11:12:37.145 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.invoke.InvokeNativeService- [Lid:10.45.22.52-1384]  database env is:[dbBackService]
+262839659 2017-06-26 11:12:37.147 [http-bio-7777-exec-40] ERROR c.ztesoft.zsmart.core.utils.BOUtils- [Lid:10.45.22.52-1384]  class not found className[com.ztesoft.zsmart.bss.res.services.SimCardService]
+java.lang.ClassNotFoundException: com.ztesoft.zsmart.bss.res.services.SimCardService
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1714) ~[catalina.jar:7.0.32]
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559) ~[catalina.jar:7.0.32]
+	at java.lang.Class.forName0(Native Method) ~[na:1.6.0_45]
+	at java.lang.Class.forName(Class.java:171) ~[na:1.6.0_45]
+	at com.ztesoft.zsmart.core.utils.BOUtils.getActionClass(BOUtils.java:99) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.service.ActionDispatch.perform(ActionDispatch.java:39) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.processSingleService(InvokeNativeService.java:172) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.invoke(InvokeNativeService.java:98) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.invoke(InvokeNativeService.java:56) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:70) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.CatchServiceExceptionInterceptor.interceptor(CatchServiceExceptionInterceptor.java:117) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:66) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceLoggingInterceptor.interceptor(ServiceLoggingInterceptor.java:132) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:66) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService0(ServiceFlow.java:159) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService(ServiceFlow.java:243) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService(ServiceFlow.java:53) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.HttpCall.callService(HttpCall.java:43) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.HttpCall.httpCallWithDbRtEvn(HttpCall.java:95) [core-service.jar:na]
+	at com.ztesoft.zsmart.web.handler.WebHandler.executeFlex(WebHandler.java:247) [webcore.jar:na]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) ~[na:1.6.0_45]
+	at java.lang.reflect.Method.invoke(Method.java:597) ~[na:1.6.0_45]
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418) [flex-messaging-remoting-1.0.jar:4.0.1.21287]
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183) [flex-messaging-remoting-1.0.jar:4.0.1.21287]
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1011) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722) [servlet-api.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.TraceFilter.doFilter(TraceFilter.java:42) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.SessionFilter.doFilter(SessionFilter.java:164) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.LocaleFilter.doFilter(LocaleFilter.java:67) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123) [catalina.jar:7.0.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168) [catalina.jar:7.0.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99) [catalina.jar:7.0.32]
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:929) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118) [catalina.jar:7.0.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407) [catalina.jar:7.0.32]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1002) [tomcat-coyote.jar:7.0.32]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585) [tomcat-coyote.jar:7.0.32]
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310) [tomcat-coyote.jar:7.0.32]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_45]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_45]
+262839659 2017-06-26 11:12:37.147 [http-bio-7777-exec-40] DEBUG c.z.z.core.i18n.I18NThreadContext- [Lid:10.45.22.52-1384]   i18nthreadContext getting localeName en ThreadName=http-bio-7777-exec-40
+262839659 2017-06-26 11:12:37.147 [http-bio-7777-exec-40] DEBUG c.z.z.core.i18n.I18NThreadContext- [Lid:10.45.22.52-1384]   i18nthreadContext getting localeName en ThreadName=http-bio-7777-exec-40
+262839661 2017-06-26 11:12:37.149 [http-bio-7777-exec-40] ERROR c.z.z.c.s.i.CatchServiceExceptionInterceptor- [Lid:10.45.22.52-1384]  An error occurred during the processing  [CancelDistributeSimCardBySect] service. threadname=[http-bio-7777-exec-40]
+com.ztesoft.zsmart.core.exception.BaseAppException: [S-SYS-00017] class com.ztesoft.zsmart.bss.res.services.SimCardService not find.
+	at com.ztesoft.zsmart.core.exception.ExceptionHandler.publish(ExceptionHandler.java:206) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.exception.ExceptionHandler.publish(ExceptionHandler.java:118) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.utils.BOUtils.getActionClass(BOUtils.java:104) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.service.ActionDispatch.perform(ActionDispatch.java:39) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.processSingleService(InvokeNativeService.java:172) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.invoke(InvokeNativeService.java:98) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.invoke(InvokeNativeService.java:56) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:70) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.CatchServiceExceptionInterceptor.interceptor(CatchServiceExceptionInterceptor.java:117) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:66) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceLoggingInterceptor.interceptor(ServiceLoggingInterceptor.java:132) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:66) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService0(ServiceFlow.java:159) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService(ServiceFlow.java:243) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService(ServiceFlow.java:53) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.HttpCall.callService(HttpCall.java:43) [core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.HttpCall.httpCallWithDbRtEvn(HttpCall.java:95) [core-service.jar:na]
+	at com.ztesoft.zsmart.web.handler.WebHandler.executeFlex(WebHandler.java:247) [webcore.jar:na]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) ~[na:1.6.0_45]
+	at java.lang.reflect.Method.invoke(Method.java:597) ~[na:1.6.0_45]
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418) [flex-messaging-remoting-1.0.jar:4.0.1.21287]
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183) [flex-messaging-remoting-1.0.jar:4.0.1.21287]
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1011) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722) [servlet-api.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.TraceFilter.doFilter(TraceFilter.java:42) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.SessionFilter.doFilter(SessionFilter.java:164) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.LocaleFilter.doFilter(LocaleFilter.java:67) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123) [catalina.jar:7.0.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168) [catalina.jar:7.0.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99) [catalina.jar:7.0.32]
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:929) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118) [catalina.jar:7.0.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407) [catalina.jar:7.0.32]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1002) [tomcat-coyote.jar:7.0.32]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585) [tomcat-coyote.jar:7.0.32]
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310) [tomcat-coyote.jar:7.0.32]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_45]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_45]
+Caused by: java.lang.ClassNotFoundException: com.ztesoft.zsmart.bss.res.services.SimCardService
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1714) ~[catalina.jar:7.0.32]
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559) ~[catalina.jar:7.0.32]
+	at java.lang.Class.forName0(Native Method) ~[na:1.6.0_45]
+	at java.lang.Class.forName(Class.java:171) ~[na:1.6.0_45]
+	at com.ztesoft.zsmart.core.utils.BOUtils.getActionClass(BOUtils.java:99) ~[core-base.jar:na]
+	... 55 common frames omitted
+262839662 2017-06-26 11:12:37.150 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.i.ServiceLoggingInterceptor- [Lid:10.45.22.52-1384]  
+[Req Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>CancelDistributeSimCardBySect</ServiceName>
+  <Data>
+    <ICCID_BEGIN>20812222111</ICCID_BEGIN>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <ICCID_END>20812222111</ICCID_END>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <userIDInfo>23</userIDInfo>
+    <SIM_TYPE_ID>1</SIM_TYPE_ID>
+    <JOB_ID>1</JOB_ID>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <ORG_ID>1</ORG_ID>
+    <APP_ID>1</APP_ID>
+    <SP_ID>0</SP_ID>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <LANG_CODE>en</LANG_CODE>
+    <QUANTITY>1</QUANTITY>
+    <IS_LOGGED_1220>false</IS_LOGGED_1220>
+  </Data>
+</zsmart>
+
+[Rsp Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>CancelDistributeSimCardBySect</ServiceName>
+  <Data>
+    <ICCID_BEGIN>20812222111</ICCID_BEGIN>
+    <CALL_SERVICE_SUCCESS>false</CALL_SERVICE_SUCCESS>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <ICCID_END>20812222111</ICCID_END>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <userIDInfo>23</userIDInfo>
+    <SIM_TYPE_ID>1</SIM_TYPE_ID>
+    <JOB_ID>1</JOB_ID>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <ORG_ID>1</ORG_ID>
+    <APP_ID>1</APP_ID>
+    <SP_ID>0</SP_ID>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <LANG_CODE>en</LANG_CODE>
+    <IS_LOGGED_1220>true</IS_LOGGED_1220>
+    <QUANTITY>1</QUANTITY>
+  </Data>
+</zsmart>
+
+
+262839662 2017-06-26 11:12:37.150 [http-bio-7777-exec-40] DEBUG c.z.z.core.jdbc.ds.route.TlDbRtLtEvn- [Lid:10.45.22.52-1384]  DbRoutingEvn end,envId is DBRT06111237000001000000,routingId is:[1]
+262839662 2017-06-26 11:12:37.150 [http-bio-7777-exec-40] DEBUG c.z.z.c.j.d.r.DbRoutingThreadContext- [Lid:10.45.22.52-1384]  remove current dbRoutingEnv
+262839662 2017-06-26 11:12:37.150 [http-bio-7777-exec-40] DEBUG c.z.z.c.j.d.r.DbRoutingThreadContext- [Lid:10.45.22.52-1384]  remove dbRouting threadContext
+262839664 2017-06-26 11:12:37.152 [http-bio-7777-exec-40] ERROR c.z.zsmart.web.handler.WebHandler- [Lid:10.45.22.52-1384]  Execute Error:[S-SYS-00017] class com.ztesoft.zsmart.bss.res.services.SimCardService not find.
+com.ztesoft.zsmart.core.exception.BaseAppException: [S-SYS-00017] class com.ztesoft.zsmart.bss.res.services.SimCardService not find.
+	at com.ztesoft.zsmart.core.exception.ExceptionHandler.publish(ExceptionHandler.java:206) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.exception.ExceptionHandler.publish(ExceptionHandler.java:118) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.utils.BOUtils.getActionClass(BOUtils.java:104) ~[core-base.jar:na]
+	at com.ztesoft.zsmart.core.service.ActionDispatch.perform(ActionDispatch.java:39) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.processSingleService(InvokeNativeService.java:172) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.invoke(InvokeNativeService.java:98) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.invoke.InvokeNativeService.invoke(InvokeNativeService.java:56) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:70) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.CatchServiceExceptionInterceptor.interceptor(CatchServiceExceptionInterceptor.java:117) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:66) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceLoggingInterceptor.interceptor(ServiceLoggingInterceptor.java:132) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.interceptor.ServiceInvocation.invoke(ServiceInvocation.java:66) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService0(ServiceFlow.java:159) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService(ServiceFlow.java:243) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.ServiceFlow.callService(ServiceFlow.java:53) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.HttpCall.callService(HttpCall.java:43) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.core.service.HttpCall.httpCallWithDbRtEvn(HttpCall.java:95) ~[core-service.jar:na]
+	at com.ztesoft.zsmart.web.handler.WebHandler.executeFlex(WebHandler.java:247) ~[webcore.jar:na]
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source) ~[na:na]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25) ~[na:1.6.0_45]
+	at java.lang.reflect.Method.invoke(Method.java:597) ~[na:1.6.0_45]
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418) [flex-messaging-remoting-1.0.jar:4.0.1.21287]
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183) [flex-messaging-remoting-1.0.jar:4.0.1.21287]
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1011) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353) [flex-messaging-core-1.0.jar:4.0.1.21287]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:722) [servlet-api.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:305) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.TraceFilter.doFilter(TraceFilter.java:42) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.SessionFilter.doFilter(SessionFilter.java:164) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at com.ztesoft.zsmart.web.filter.LocaleFilter.doFilter(LocaleFilter.java:67) [webcore.jar:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:243) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:210) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:222) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:123) [catalina.jar:7.0.32]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:472) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:168) [catalina.jar:7.0.32]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:99) [catalina.jar:7.0.32]
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:929) [catalina.jar:7.0.32]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:118) [catalina.jar:7.0.32]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:407) [catalina.jar:7.0.32]
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1002) [tomcat-coyote.jar:7.0.32]
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:585) [tomcat-coyote.jar:7.0.32]
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:310) [tomcat-coyote.jar:7.0.32]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [na:1.6.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [na:1.6.0_45]
+	at java.lang.Thread.run(Thread.java:662) [na:1.6.0_45]
+Caused by: java.lang.ClassNotFoundException: com.ztesoft.zsmart.bss.res.services.SimCardService
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1714) ~[catalina.jar:7.0.32]
+	at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1559) ~[catalina.jar:7.0.32]
+	at java.lang.Class.forName0(Native Method) ~[na:1.6.0_45]
+	at java.lang.Class.forName(Class.java:171) ~[na:1.6.0_45]
+	at com.ztesoft.zsmart.core.utils.BOUtils.getActionClass(BOUtils.java:99) ~[core-base.jar:na]
+	... 55 common frames omitted
+262839666 2017-06-26 11:12:37.154 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- [Lid:10.45.22.52-1384]  Thread [http-bio-7777-exec-40] remove remoteIp
+262839666 2017-06-26 11:12:37.154 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- Thread [http-bio-7777-exec-40] remove loggingId
+262839705 2017-06-26 11:12:37.193 [http-bio-7777-exec-40] DEBUG c.z.z.core.i18n.I18NThreadContext-  i18nthreadContext setting localeName en ThreadName=http-bio-7777-exec-40
+262839705 2017-06-26 11:12:37.193 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, enter sessionFilter doFilter
+262839705 2017-06-26 11:12:37.193 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, isDevelopMode-->false
+262839705 2017-06-26 11:12:37.193 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, requestStr-->http://10.45.53.207:7777/cvbs/messagebroker/amf
+262839705 2017-06-26 11:12:37.193 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.filter.SessionFilter- SessionId:33CB28FD81DABBEB5BA79CB75D2CBBAC, HTTP Header :referer-->http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3
+262839706 2017-06-26 11:12:37.194 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- Thread [http-bio-7777-exec-40] registered remoteIp [10.45.22.52]
+262839706 2017-06-26 11:12:37.194 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- [Lid:10.45.22.52-1385]  Thread [http-bio-7777-exec-40] registered loggingId [10.45.22.52-1385]
+262839706 2017-06-26 11:12:37.194 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.util.SystemParam- [Lid:10.45.22.52-1385]  get system parameter from cache. mask = USERONLINE_UPDATETIME, value = 60
+262839706 2017-06-26 11:12:37.194 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1385]  begin http call service!
+262839708 2017-06-26 11:12:37.196 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.invoke.InvokeNativeService- [Lid:10.45.22.52-1385]  database env is:[dbBackService]
+262839708 2017-06-26 11:12:37.196 [http-bio-7777-exec-40] DEBUG c.z.z.b.b.s.b.GetRoutingByInstanceService- [Lid:10.45.22.52-1385]  routing id array is: [-1]
+262839709 2017-06-26 11:12:37.197 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.i.ServiceLoggingInterceptor- [Lid:10.45.22.52-1385]  
+[Req Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>GetRoutingByInstanceService</ServiceName>
+  <Data>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <SP_ID>0</SP_ID>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <PARAM_MASKS>SHOW_ONLINEHELP</PARAM_MASKS>
+    <PARAM_MASKS>ONLINEHELP_URL</PARAM_MASKS>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <userIDInfo>23</userIDInfo>
+    <LANG_CODE>en</LANG_CODE>
+    <ROUTING_ID_ARRAY>[Ljava.lang.Long;@10a9ae76</ROUTING_ID_ARRAY>
+    <IS_LOGGED_1220>false</IS_LOGGED_1220>
+    <JOB_ID>1</JOB_ID>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <APP_ID>1</APP_ID>
+  </Data>
+</zsmart>
+
+[Rsp Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>GetRoutingByInstanceService</ServiceName>
+  <Data>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <SP_ID>0</SP_ID>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <PARAM_MASKS>SHOW_ONLINEHELP</PARAM_MASKS>
+    <PARAM_MASKS>ONLINEHELP_URL</PARAM_MASKS>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <userIDInfo>23</userIDInfo>
+    <LANG_CODE>en</LANG_CODE>
+    <ROUTING_ID_ARRAY>[Ljava.lang.Long;@5a191240</ROUTING_ID_ARRAY>
+    <IS_LOGGED_1220>true</IS_LOGGED_1220>
+    <JOB_ID>1</JOB_ID>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <APP_ID>1</APP_ID>
+  </Data>
+</zsmart>
+
+
+262839709 2017-06-26 11:12:37.197 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1385]  end http call service!
+262839709 2017-06-26 11:12:37.197 [http-bio-7777-exec-40] DEBUG c.z.z.core.jdbc.ds.route.TlDbRtLtEvn- [Lid:10.45.22.52-1385]  DbRoutingEvn begin,envId is DBRT06111237000011000000,routingId is:[1]
+262839709 2017-06-26 11:12:37.197 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1385]  begin http call service!
+262839710 2017-06-26 11:12:37.198 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.invoke.InvokeNativeService- [Lid:10.45.22.52-1385]  database env is:[dbBackService]
+262839710 2017-06-26 11:12:37.198 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.util.SystemParam- [Lid:10.45.22.52-1385]  get system parameter from cache. mask = SHOW_ONLINEHELP, value = false
+262839710 2017-06-26 11:12:37.198 [http-bio-7777-exec-40] DEBUG c.z.zsmart.web.util.SystemParam- [Lid:10.45.22.52-1385]  get system parameter from cache. mask = ONLINEHELP_URL, value = null
+262839711 2017-06-26 11:12:37.199 [http-bio-7777-exec-40] DEBUG c.z.z.c.s.i.ServiceLoggingInterceptor- [Lid:10.45.22.52-1385]  
+[Req Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>QrySysParamsByMasks</ServiceName>
+  <Data>
+    <SP_ID>0</SP_ID>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <PARAM_MASKS>SHOW_ONLINEHELP</PARAM_MASKS>
+    <PARAM_MASKS>ONLINEHELP_URL</PARAM_MASKS>
+    <userIDInfo>23</userIDInfo>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <LANG_CODE>en</LANG_CODE>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <JOB_ID>1</JOB_ID>
+    <IS_LOGGED_1220>false</IS_LOGGED_1220>
+    <APP_ID>1</APP_ID>
+  </Data>
+</zsmart>
+
+[Rsp Xml]: 
+<?xml version="1.0" encoding="utf-8"?>
+
+<zsmart>
+  <ServiceName>QrySysParamsByMasks</ServiceName>
+  <Data>
+    <SP_ID>0</SP_ID>
+    <zsmart_referer_url>http://10.45.53.207:7777/cvbs/default/DefaultPortal.swf/[[DYNAMIC]]/3</zsmart_referer_url>
+    <PARAM_LIST>
+      <PARAM>62</PARAM>
+      <MASK>SHOW_ONLINEHELP</MASK>
+      <COMMENTS>show On Line Help</COMMENTS>
+      <CURRENT_VALUE>false</CURRENT_VALUE>
+      <PARAM_NAME>On Line Help Show</PARAM_NAME>
+    </PARAM_LIST>
+    <PARAM_LIST>
+      <PARAM>63</PARAM>
+      <MASK>ONLINEHELP_URL</MASK>
+      <COMMENTS>on line help URL</COMMENTS>
+      <PARAM_NAME>on line help URL</PARAM_NAME>
+    </PARAM_LIST>
+    <STAFF_JOB_ID>21</STAFF_JOB_ID>
+    <PARAM_MASKS>SHOW_ONLINEHELP</PARAM_MASKS>
+    <PARAM_MASKS>ONLINEHELP_URL</PARAM_MASKS>
+    <userIDInfo>23</userIDInfo>
+    <hasLoginInfo>Y</hasLoginInfo>
+    <LANG_CODE>en</LANG_CODE>
+    <IS_LOGGED_1220>true</IS_LOGGED_1220>
+    <zsmart_session>
+      <job-name>IT Center Administrator</job-name>
+      <user-code>qq</user-code>
+      <org-id>1</org-id>
+      <sp-id>0</sp-id>
+      <area-id>1</area-id>
+      <staff-name>qq</staff-name>
+      <password>q5o+VI/d0Vk=</password>
+      <portal-id>51</portal-id>
+      <user-name>qq</user-name>
+      <job-id>1</job-id>
+      <area-name>Default Area</area-name>
+      <login-ip>10.45.22.52</login-ip>
+      <staff-id>21</staff-id>
+      <login-date>2017-06-26 10:48:56</login-date>
+      <portal-name>Business Common Portal</portal-name>
+      <org-name>Botswana</org-name>
+      <SESSION_ID>33CB28FD81DABBEB5BA79CB75D2CBBAC</SESSION_ID>
+      <user-id>23</user-id>
+      <staff-job-id>21</staff-job-id>
+      <app-id>1</app-id>
+      <remote-ip>10.45.22.52</remote-ip>
+    </zsmart_session>
+    <JOB_ID>1</JOB_ID>
+    <APP_ID>1</APP_ID>
+  </Data>
+</zsmart>
+
+
+262839711 2017-06-26 11:12:37.199 [http-bio-7777-exec-40] DEBUG c.z.zsmart.core.service.HttpCall- [Lid:10.45.22.52-1385]  end http call service!
+262839711 2017-06-26 11:12:37.199 [http-bio-7777-exec-40] DEBUG c.z.z.core.jdbc.ds.route.TlDbRtLtEvn- [Lid:10.45.22.52-1385]  DbRoutingEvn end,envId is DBRT06111237000011000000,routingId is:[1]
+262839711 2017-06-26 11:12:37.199 [http-bio-7777-exec-40] DEBUG c.z.z.c.j.d.r.DbRoutingThreadContext- [Lid:10.45.22.52-1385]  remove current dbRoutingEnv
+262839711 2017-06-26 11:12:37.199 [http-bio-7777-exec-40] DEBUG c.z.z.c.j.d.r.DbRoutingThreadContext- [Lid:10.45.22.52-1385]  remove dbRouting threadContext
+262839712 2017-06-26 11:12:37.200 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- [Lid:10.45.22.52-1385]  Thread [http-bio-7777-exec-40] remove remoteIp
+262839712 2017-06-26 11:12:37.200 [http-bio-7777-exec-40] INFO  c.z.z.core.nbrtrace.NbrTracerMgr- Thread [http-bio-7777-exec-40] remove loggingId
+262840732 2017-06-26 11:12:38.220 [Thread-15] DEBUG c.z.zsmart.web.util.SystemParam- get system parameter from cache. mask = USERONLINE_SCANTIME, value = 30
+262840732 2017-06-26 11:12:38.220 [Thread-15] DEBUG c.z.zsmart.web.util.SystemParam- get system parameter from cache. mask = USERONLINE_TIMEOUT, value = 30

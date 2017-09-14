@@ -1,0 +1,19 @@
+@charset "UTF-8";
+// ===========================================================================
+//  网站底部的样式
+// ===========================================================================
+
+.webpage-footer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    line-height: 1.8;
+    font-size: 12px;
+    text-align: center;
+    color: #333;
+    padding: 35px 0;
+    background: #efefef url(../../images/footer-logo.png) no-repeat center bottom;
+    @media (max-width: 767px) {
+        font-size: 14px;
+    }
+}

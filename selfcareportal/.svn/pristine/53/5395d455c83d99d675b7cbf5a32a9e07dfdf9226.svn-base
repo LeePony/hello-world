@@ -1,0 +1,111 @@
+<div class="row">
+	<div class="col-xs-12 col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_ACCOUNT_INFORMATION}}</h3>
+			</div>
+				
+			<div class="box-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<form class="form form-horizontal account-form">
+						
+						<div class="row">
+								<label class="col-xs-6 control-label">{{SC_ACCOUNT_NO}}</label>
+								<div class="col-xs-6 col-sm-5 account-number"> 
+									<input type="text" id='selAccount' class="form-control" />
+								</div>
+							</div>
+						
+							<!--  <div class="row">
+								<label class="col-sm-4 control-label">{{SC_ACCOUNT_NO}}</label>
+								<div class="col-xs-6 col-sm-4">
+									<input type="text" id='acctNbr'
+										class="form-control form-control-static lost-active" readonly
+										value="">
+								</div>
+							</div>-->
+							<div class="row">
+								<label class="col-xs-6 control-label">{{SC_PAID_TYPE}}</label>
+								<div class="col-xs-6 account-number" >
+									<input type="text" id='paidFlag'
+										class="form-control form-control-static" readonly value="">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-xs-12" id='postpaid' hidden>
+						<!-- 如果是后付费 则显示这块区域 -->
+						<div class="querylist-group account-group">
+							<div class="querylist remaining-balance due">
+								<div class="querylist-content">
+									<span class="querylist-text">{{SC_DUE}}</span> <span
+										class="querylist-number" id='due'> </span> <a
+										href="javascript:void(0)" id="topupid" name='topup'>{{SC_TOP_UP}}</a>
+								</div>
+								<div class="querylist-iocn">
+									<img src="images/remaining-balance.png">
+								</div>
+							</div>
+							<!-- 此区域不显示 -->
+							<!-- <div class="querylist credit-limit">
+                                <div class="package-process-credit">
+                                    <div class="package-total">
+                                        Credit Limit
+                                    </div>
+                                    <div class="progress-box">
+                                        <div class="progress-value" style="width:40%"></div>
+                                    </div>
+                                    <div class="package-usage">
+                                        Usage : <span class="num">$87.00</span>
+                                    </div>
+                                    <div class="package-remainder">
+                                        Remainder : <span class="num">$13.00</span>
+                                    </div>
+                                </div>
+                            </div> -->
+						</div>
+					</div>
+				</div>
+				<!-- 如果是非后付费 则显示这块区域 -->
+				<div id='prepaid' hidden>
+					<div class="account-group">
+						<div class="querylist total-usage" hidden>
+							<div class="querylist-content">
+								<span class="querylist-text">{{SC_TOTAL_USAGE}}</span> <span
+									class="querylist-number" id='used'></span>
+							</div>
+							<div class="querylist-iocn">
+								<img src="images/total-usage.png">
+							</div>
+						</div>
+						<div class="querylist remaining-balance">
+							<div class="querylist-content">
+								<span class="querylist-text">{{SC_REMAIN_BALANCE}}</span> <span
+									class="querylist-number" id='remain'></span> <a
+									href="javascript:void(0)" name='topup'>{{SC_TOP_UP}}</a>
+							</div>
+							<div class="querylist-iocn">
+								<img src="images/remaining-balance.png">
+							</div>
+						</div>
+						<div class="querylist last-top-up">
+							<div class="querylist-content">
+								<span class="querylist-text">{{SC_LAST_TOP_UP}}  <span id='chargeDate'></span></span>
+								 <span class="querylist-number"><span id='charge'>
+								</span> </span> <a href="javascript:void(0)" id='more'>{{SC_MORE}}...</a>
+							</div>
+							<div class="querylist-iocn">
+								<img src="images/last-top-up.png">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div id='bounsDiv' class='col-xs-12'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

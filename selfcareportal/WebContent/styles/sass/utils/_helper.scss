@@ -1,0 +1,39 @@
+@charset "UTF-8";
+// ===========================================================================
+//  一些用于辅助的类
+//  但是不建议在页面中引用
+// ===========================================================================
+// 
+.ui-loader {display: none;}
+.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0}
+
+// 清除边框边距
+.no-padding { padding: 0 !important; }
+.no-margin { margin: 0 !important; }
+.no-border { border: 0 !important; }
+
+// 清除浮动
+.clearfix {clear: both;}
+
+// 强制浮动
+.fl, .float-left { float: left !important; }
+.fr, .float-right { float: right !important; }
+
+
+// 强制文字对齐
+.tl, .text-left, { text-align: left !important; }
+.tr, .text-right, { text-align: right !important; }
+
+
+// 设定盒模型
+.v-hidden { visibility: hidden !important; }
+.hide { display: none !important; }
+.show, .block { display: block !important; }
+.inline { display: inline !important; }
+.inline-block { display: inline-block !important; }
+
+.border-box, .b-box { box-sizing: border-box !important; }
+.content-box, .c-box { box-sizing: content-box !important; }
+.padding-box, .p-box { box-sizing: padding-box !important; } // 已弃用

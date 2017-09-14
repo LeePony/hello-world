@@ -1,0 +1,237 @@
+<div class="row">
+	<div class="col-xs-12 col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_CALL_HISOTY_TITLE}}</h3>
+			</div>
+			<div class="box-body">
+				<div class="description">
+					<div><i class="iconfont icon-tishi"></i></div>
+					<ul>
+						<li><span> * </span>{{SC_DESCRIPTION_MSG_1}}</li>
+						<li><span> * </span>{{SC_DESCRIPTION_MSG_2}}</li>
+						<li><span> * </span>{{SC_DESCRIPTION_MSG_3}}</li>
+					</ul>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 btn-list" id='MonthButton'>
+						<button type="button" id="otherTime" class="btn btn-default clearfix btn-primary">{{SC_OTHER_TIME}}</button>
+						<div class="custom-time">
+						<form>
+                            <div class="col-xs-12 col-sm-5 no-padding">
+                            	<div class="input-group"><input type="text" data-rule='required;' id="startDate" class="form-control"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-5 no-padding">
+                            	<div class="input-group"><input type="text" data-rule='required;' id="endDate" class="form-control"></div>
+                            </div>
+							<button type="button" class="search" id='search'><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+						</div>
+					</div>
+				</div>
+				<section class="page-section">
+					<div id="tabs" class="ui-tabs">
+                        <ul class="tabs-nav-list">
+                            <li>
+                                <a href="#tabs-a">{{SC_VOICK}}</a>
+                            </li>
+                            <li>
+                                <a href="#tabs-b">{{SC_DATA}}</a>
+                            </li>
+                            <li>
+                                <a href="#tabs-c">{{SC_SMS}}</a>
+                            </li>
+                            <li>
+                                <a href="#tabs-d">{{SC_VAS_PROD}}</a>
+                            </li>
+                        </ul>
+                        <div id="tabs-a" class="ui-tabs-panel">
+                        	<div class="row" id='voiceDiv' hidden>
+								<div class="col-xs-12 col-sm-12 history-info" >
+									<form class="form form-horizontal">
+										<div class="history-info-left">
+											<div class="list-group">
+												<label class="control-label">{{SC_CUST_NAME}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="John">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_MOBILE_NO}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="(Credit) 80.00">
+											</div>
+										</div>
+										<div class="history-info-right">
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_AMOUNT}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="$0.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_RECORD}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="125 Record">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="table-box"><div id="grid0"></div></div>
+							<div class="row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default float-left btn-print" id='printVoick' name='printBtn' printType='voice' index=0>Print</button>
+									<form action='exportBill.do' id='form0'>
+									<input type ='hidden' id='Cols0' name ='colModel' />
+									<input type ='hidden' id='param0' name='param' />
+									<input type ='hidden' id='fileNam0' name='fileName' value = 'voice'/>
+									<button type="button" class="btn btn-primary" id='download0' name= 'download' index=0>Download</button>
+									</form>
+								</div>
+							</div>
+                        </div>
+                        <div id="tabs-b" class="ui-tabs-panel" >
+                        	<div class="row"  hidden>
+								<div class="col-xs-12 col-sm-12 history-info">
+									<form class="form form-horizontal">
+										<div class="history-info-left">
+											<div class="list-group">
+												<label class="control-label">{{SC_CUST_NAME}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="138132123456">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_MOBILE_NO}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="(Credit) 80.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_BILLING_CYCLE}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="18 Apr - 18 May">
+											</div>
+										</div>
+										<div class="history-info-right">
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_DATA}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="1025 MB">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_AMOUNT}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="$0.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_RECORD}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="125 Record">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="table-box"><div id="grid1"></div></div>
+							<div class="row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default float-left btn-print" name='printBtn' index=1>Print</button>
+									<form action='exportBill.do' id='form1'>
+									<input type ='hidden' id='param1'  name ='param'/>
+									<input type ='hidden' id='Cols1' name ='colModel' />
+									<input type ='hidden' id='fileNam0' name='fileName' value = 'data'/>
+									<button type="button" class="btn btn-primary" id='download1' name= 'download' index=1>Download</button>
+									</form>
+								</div>
+							</div>
+                        </div>
+                        <div id="tabs-c" class="ui-tabs-panel">
+                        	<div class="row">
+								<div class="col-xs-12 col-sm-12 history-info" hidden>
+									<form class="form form-horizontal">
+										<div class="history-info-left">
+											<div class="list-group">
+												<label class="control-label">{{SC_CUST_NAME}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="138132123456">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_MOBILE_NO}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="(Credit) 80.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_BILLING_CYCLE}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="18 Apr - 18 May">
+											</div>
+										</div>
+										<div class="history-info-right">
+											<div class="list-group v-hidden">
+												<label class="control-label">0</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="0">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_AMOUNT}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="$0.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_RECORD}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="125 Record">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="table-box"><div id="grid2"></div></div>
+							<div class="row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default float-left btn-print" name='printBtn' index=2>Print</button>
+									<form action='exportBill.do' id='form2'>
+									<input type ='hidden' id='Cols2' name ='colModel'/>
+									<input type ='hidden' id='param2'  name ='param'/>
+									<input type ='hidden' id='fileNam0' name='fileName' value = 'SMS'/>
+									<button type="button" class="btn btn-primary" id='download2' name= 'download' index=2>Download</button>
+									</form>
+								</div>
+							</div>
+                        </div>
+                        <div id="tabs-d" class="ui-tabs-panel">
+                        	<div class="row">
+								<div class="col-xs-12 col-sm-12 history-info" hidden>
+									<form class="form form-horizontal">
+										<div class="history-info-left">
+											<div class="list-group">
+												<label class="control-label">{{SC_CUST_NAME}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="138132123456">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_MOBILE_NO}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="(Credit) 80.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_BILLING_CYCLE}} :</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="18 Apr - 18 May">
+											</div>
+										</div>
+										<div class="history-info-right">
+											<div class="list-group v-hidden">
+												<label class="control-label">0</label>
+												<input type="text" class="form-control form-control-static" readonly="" value="0">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_AMOUNT}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="$0.00">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_RECORD}} :</label>
+												<input type="text" class="form-control form-control-static num" readonly="" value="125 Record">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="table-box"><div id="grid3"></div></div>
+							<div class="row">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-default float-left btn-print" name='printBtn' index=3>Print</button>
+									<form action='exportBill.do' id='form3' class="float-left">
+									<input type ='hidden' id='Cols3' name ='colModel'/>
+									<input type ='hidden' id='param3' name ='param' />
+									<input type ='hidden' id='fileNam0' name='fileName' value = 'VAS'/>
+									<button type="button" class="btn btn-primary" id='download3' name= 'download' index=3>Download</button>
+									</form>
+								</div>
+							</div>
+                        </div>
+                    </div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

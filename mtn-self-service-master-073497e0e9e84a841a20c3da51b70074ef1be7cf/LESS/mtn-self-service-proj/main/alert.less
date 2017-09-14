@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+.ui-dialog {
+    .modal-header {
+        background-color: #4b4b4b;
+    }
+    .modal-body {
+        padding: 20px;
+    }
+    .modal-footer {
+        padding: 0 20px 20px;
+        border-top: 0;
+        text-align: center;
+    }
+    &.modal-success,
+    &.modal-warning,
+    &.modal-danger,
+    &.modal-confirm,
+    &.modal-info {
+        width: 420px;
+        .modal-header {
+            border: 0;
+            position: relative;
+            height: 120px;
+            .modal-title {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                margin-left: -45px;
+                background: transparent url(../../image/alert_info.gif) no-repeat;
+                width: 90px;
+                height: 90px;
+                color: transparent;
+                font-size: 0;
+            }
+            .close {
+                display: none; /* alert弹出框不显示关闭按钮 */
+                // position: absolute;
+                // top: 10px;
+                // right: 10px;
+                // margin: 0;
+            }
+        }
+        .modal-body {
+            text-align: center;
+            .special-font(16px, #000);
+            word-wrap: break-word;
+            & > .glyphicon {
+                opacity: 0;
+                display: none;
+            }
+            .modal-message {
+                margin: 0;
+            }
+        }
+        .modal-footer {
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            float: none;
+            .btn {
+                margin: 0;
+            }
+        }
+
+    }
+	&.modal-info {
+        .modal-header .modal-title { background-image: url(../../image/alert_info.gif); }
+	}
+	&.modal-success {
+        .modal-header .modal-title { background-image: url(../../image/alert_success.gif); }
+	}
+	&.modal-warning {
+        .modal-header .modal-title { background-image: url(../../image/alert_warning.gif); }
+	}
+	&.modal-danger {
+        .modal-header .modal-title { background-image: url(../../image/alert_error.gif); }
+	}
+	&.modal-confirm {
+        .modal-body .form-control{
+            margin-top: 10px;
+        }
+        .modal-footer .btn-default {
+            margin-left: 10px;
+        }
+    }
+}

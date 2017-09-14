@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@import "function";
+// ===========================================================================
+//  模拟Photoshop图层样式
+// ===========================================================================
+
+@mixin photoshop($param...) {
+    $res: 0 0 rgba(0,0,0,0);
+
+    @for $i from 1 to length($param)+1 {
+        // 图层样式
+        $type: nth(nth($param,$i),1);
+        type: #{$type};
+
+        // 样式配置参数
+        $config: null;
+        $n: 0; // 参数长度
+        @if (length(nth($param,$i)) > 1) {
+            $config: nth(nth($param,$i),2);
+            $n: length($config);
+            config: #{$n}, #{$config};
+        }
+
+
+        // 文字霓虹灯（发光）效果
+        @if ($type == "neon") {
+
+            // param 1(第一个参数): 发光距离
+            $distance: 40px;
+            @if ($n > 0) {$distance: nth($config,1);}
+
+            // param 2: 起始颜色
+            $cfrom: #fff;
+            @if ($n > 1) {$cfrom: nth($config,2);}
+
+            // param 3: 最外圈颜色
+            $cto: #ff00de;
+            @if ($n > 2) {$cto: nth($config,3);}
+
+            // param 4: 渐变层次
+            $level: 6;
+            @if ($n > 3) {$level: nth($config,4);}
+
+
+
+            $base: 1;
+            $sum: 1;
+            // 计算前 $level+1 项斐波那契数列的和，作为基数
+            @for $x from 2 to $level+2 { $base: $base + fib($x);}
+
+            // 逐层生成光晕
+            @for $x from 2 to $level+2 {
+                // $sum是斐波那契数列前 $x 项和
+                $sum: $sum + fib($x);
+                // $r是每层所占总长度的比率
+                $r: $sum / $base;
+
+                $res: #{$res}, 0 0 $distance * $r mix($cto, $cfrom, 100%*$r);
+            }
+
+        } // end of neon
+
+
+        // 3D文字
+        @elseif ($type == "3d") {
+            // param 1: 字体颜色
+            $fcolor: #ccc;
+            @if ($n > 0) {$fcolor: nth($config,1);}
+
+            // param 2: x偏移量
+            $ofx: 5px;
+            @if ($n > 1) {$ofx: nth($config,2);}
+
+            // param 3: y偏移量
+            $ofy: 5px;
+            @if ($n > 2) {$ofy: nth($config,3);}
+
+            // param 4: 阴影层次
+            $level: 6;
+            @if ($n > 3) {$level: nth($config,4);}
+
+
+
+
+            color: $fcolor;
+            //$shadow: darken($fcolor, 25);
+            //$param: $ofx $ofy 0 $shadow;
+            @for $t from 1 to $level+1 {
+                $r: $t / $level;
+                $res: #{$res}, $ofx*$r $ofy*$r 0 darken($fcolor, 25);
+            }
+        } // end of 3d
+
+
+        // 浮雕效果
+        @elseif ($type == "emboss") {
+            // param 1: 字体颜色
+            $fcolor: #ccc;
+            @if ($n > 0) {$fcolor: nth($config,1);}
+
+            // param 2: 浮雕阴影宽度
+            $w: 1px;
+            @if ($n > 1) {$w: nth($config,2);}
+
+
+            color: $fcolor !important;
+
+            $v: -$w;
+            $res: #{$res},
+                  $v $v 0 lighten($fcolor, 20),
+                  0 $v 1px rgba(lighten($fcolor, 20),0.6),
+                  $w $w 0 darken($fcolor, 65),
+                  $w $w 0 darken($fcolor, 55);
+
+        } // end of emboss
+
+
+        // 文字描边
+        @elseif ($type == "stroke") {
+            // param 1: 描边宽度
+            $w: 2px;
+            @if ($n > 0) {$w: nth($config,1);}
+
+            // param 2: 描边颜色
+            $color: #F96;
+            @if ($n > 1) {$color: nth($config,2);}
+
+            // param 3: 是否使用webkit的样式
+            $webkit: true;
+            @if ($n > 2) {$webkit: nth($config,3);}
+
+
+            @if ($webkit == true) {
+                // 仅 wibkit 内核有效，和text-shadow效果叠加
+                -webkit-text-stroke: $w $color;
+            } @else {
+
+                $v: -$w;
+                $res: #{$res},
+                      $w $w 0 $color,
+                      $w $v 0 $color,
+                      $v $w 0 $color,
+                      $v $v 0 $color,
+                      0 $w 0 $color,
+                      0 $v 0 $color,
+                      $w 0 0 $color,
+                      $v 0 0 $color;
+            }
+
+        } // end of stroke
+
+
+
+        // 文字模糊
+        @elseif ($type == "blur") {
+            // param 1: 模糊半径
+            $depth: 8px;
+            @if ($n > 0) {$depth: nth($config,1);}
+
+            // param 2: 模糊颜色
+            $shadow: #F96;
+            @if ($n > 1) {$shadow: nth($config,2);}
+
+
+            color: transparent !important;
+            $res: #{$res}, 0 0 $depth $shadow;
+
+        } // end of blur
+
+    }
+
+
+
+
+    text-shadow: $res;
+}
+
+
+
+// =============================================================
+//  文字霓虹灯（发光）效果
+// =============================================================
+@mixin text-neon(
+        $distance: 40px,
+        $cfrom: #fff,
+        $cto: #ff00de,
+        $level: 6
+    ) {
+    @include photoshop("neon", $distance $cfrom $cto $level);
+}
+
+
+// =============================================================
+//  文字模糊
+//  注：使用时，不用额外给字体设置颜色
+// =============================================================
+@mixin text-blur($depth:8px, $color:#F96) {
+    color: transparent;
+    text-shadow: 0 0 $depth $color;
+}
+
+
+// =============================================================
+//  文字描边
+//  注：对于有文字中的斜边，在角处有锯齿
+// =============================================================
+@mixin text-stroke($w: 2px,$color:#F96) {
+    $v: -$w;
+    $param: $w $w 0 $color,
+            $w $v 0 $color,
+            $v $w 0 $color,
+            $v $v 0 $color,
+            0 $w 0 $color,
+            0 $v 0 $color,
+            $w 0 0 $color,
+            $v 0 0 $color;
+    text-shadow: #{$param};
+
+    // 仅 wibkit 内核有效，和text-shadow效果叠加了
+    // -webkit-text-stroke: $w $color;
+}
+
+
+// =============================================================
+//  浮雕效果
+//  注：宽度（第二个参数）尽量保持为1px，不要再大了
+// =============================================================
+@mixin text-emboss($fcolor:#ccc, $w: 1px) {
+    $v: -$w;
+    $param: $v $v 0 lighten($fcolor, 20),
+            0 $v 1px rgba(lighten($fcolor, 20),0.6),
+            $w $w 0 darken($fcolor, 65),
+            $w $w 0 darken($fcolor, 55);
+    color: $fcolor;
+    text-shadow: #{$param};
+}
+
+
+// =============================================================
+//  凹陷效果
+//  需要优化，效果并不是很明显
+// =============================================================
+@mixin text-inset($fcolor:#ccc, $w: 1px) {
+    $v: -$w;
+    $param: //$w $w 0 lighten($fcolor, 15),
+            0 $w 0 rgba(lighten($fcolor, 20),0.6),
+            $v $v 0 darken($fcolor, 55),
+            $v $v 0 darken($fcolor, 65);
+
+    color: $fcolor;
+    text-shadow: #{$param};
+}
+
+
+// =============================================================
+//  3D文字
+// =============================================================
+@mixin text-3d($fcolor:#ccc, $ofx: 5px, $ofy: 4px, $n: 5) {
+    $shadow: darken($fcolor, 25);
+
+    $param: $ofx $ofy 0 $shadow;
+    @for $i from 1 to $n {
+        $x: $ofx * $i / $n;
+        $y: $ofy * $i / $n;
+        $param: #{$param}, $x $y 0 $shadow;
+    }
+    color: $fcolor;
+    text-shadow: #{$param};
+}

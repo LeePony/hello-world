@@ -1,0 +1,235 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">My Point</h3>
+			</div>
+			<div class="box-body">
+				<div class="querylist-group point-group">
+					<div class="querylist total-usage">
+						<div class="querylist-iocn">
+							<img src="images/point-1.png" alt="Trouble Ticket">
+						</div>
+						<div class="querylist-content">
+							<span class="querylist-text">Total</span>
+							<span class="querylist-number">320</span>
+						</div>
+					</div>
+					<div class="querylist remaining-balance">
+						<div class="querylist-iocn">
+							<img src="images/point-2.png" alt="Trouble Ticket">
+						</div>
+						<div class="querylist-content">
+							<span class="querylist-text">Used</span>
+							<span class="querylist-number">0</span>
+						</div>
+					</div>
+					<div class="querylist last-top-up">
+						<div class="querylist-iocn">
+							<img src="images/point-3.png" alt="Trouble Ticket">
+						</div>
+						<div class="querylist-content">
+							<span class="querylist-text">Points added this month</span>
+							<span class="querylist-number">+ 15</span>
+						</div>
+					</div>
+					<div class="querylist point">
+						<div class="querylist-iocn">
+							<img src="images/point-4.png" alt="Trouble Ticket">
+						</div>
+						<div class="querylist-content">
+							<span class="querylist-text">Points expiring this month</span>
+							<span class="querylist-number">0</span>
+						</div>
+					</div>
+				</div>
+				<section class="page-section">
+					<x-tabs name="tab">
+						<group active="active">
+							<trigger>Points generated record</trigger>
+							<target>
+								<div class="row">
+									<div class="col-sm-12 point-info">
+										Inquiry period : 2015-11-01 to  016-04-14
+									</div>
+								</div>
+								<table class="dataTable" cellspacing="0" width="100%">
+									<thead>
+							            <tr>
+							                <th>Generate points</th>
+							                <th>Integral Type</th>
+							                <th>Generation time</th>
+							                <th>Failure time</th>
+							            </tr>
+							        </thead>
+							        <tbody>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							        </tbody>
+								</table>
+							</target>
+						</group>
+						<group>
+							<trigger>Points Purchase History</trigger>
+							<target>
+								<table class="dataTable" cellspacing="0" width="100%">
+									<thead>
+							            <tr>
+							                <th>Consumption product score</th>
+							                <th>Spending time</th>
+							                <th>Name of exchange</th>
+							                <th>Exchange face value</th>
+							            </tr>
+							        </thead>
+							        <tbody>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							        </tbody>
+								</table>
+							</target>
+						</group>
+						<group>
+							<trigger>Redeem</trigger>
+							<target>
+								<table class="dataTable" cellspacing="0" width="100%">
+									<thead>
+							            <tr>
+							                <th>product name</th>
+							                <th>Exchange face value</th>
+							                <th>Consumption product score</th>
+							                <th></th>
+							            </tr>
+							        </thead>
+							        <tbody>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							            <tr>
+							                <td>136</td>
+							                <td>Communications Consumer Points</td>
+							                <td>2016-04-12 18:13:48</td>
+							                <td>2019-03-31 23:59:59</td>
+							            </tr>
+							        </tbody>
+								</table>
+							</target>
+						</group>
+					</x-tabs>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

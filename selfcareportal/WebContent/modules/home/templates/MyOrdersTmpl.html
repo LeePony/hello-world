@@ -1,0 +1,65 @@
+<div class="row">
+	<div class="col-xs-12 col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_MY_ORDERS}}</h3>
+			</div>
+			<div class="box-body">
+				<div class="description">
+					<div><i class="iconfont icon-tishi"></i></div>
+					<ul>
+						<li><span> * </span>{{SC_MY_ORDERS_COMMENTS1}}</li>
+						<li><span> * </span>{{SC_MY_ORDERS_COMMENTS2}}</li>
+					</ul>
+				</div>
+				<div class="row history-date-list">
+					<div class="col-xs-12 col-sm-12 col-md-12">
+						<button type="button" id="threeMonth" class="btn btn-date current">{{SC_NEARLY_THREE_MONTH}}</button>
+						<button type="button" id="sixMonth" class="btn btn-date">{{SC_NEARLY_SIX_MONTH}}</button>
+						<button type="button" id="customTime" class="btn btn-date clearfix">{{SC_CUST_TIME}}</button>
+						<form id="searchForm">
+						<div class="custom-time">
+                            <div class="col-xs-12 col-sm-5 no-padding">
+                            	<div class="input-group"><input type="text" id="startDate" class="form-control" data-rule="required;date;"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-5 no-padding">
+                            	<div class="input-group"><input type="text" id="endDate" class="form-control" data-rule="required;match[gte, startDate, date];"></div>
+                            </div>
+							<button type="button" id="customTimeSearch" class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+						</div>
+						</form>
+					</div>
+				</div>
+				<div class="table-box">
+					<div id="myOrdersGrid"></div>
+<!-- 					<table class="dataTable" cellspacing="0" width="100%"> -->
+<!-- 						<thead> -->
+<!-- 							<tr> -->
+<!-- 								<th>Offer Name</th> -->
+<!-- 								<th>Active Date</th> -->
+<!-- 								<th>Status</th> -->
+<!-- 							</tr> -->
+<!-- 						</thead> -->
+<!-- 						<tbody> -->
+<!-- 							<tr> -->
+<!-- 								<td>2016-04-18 12:18:01</td> -->
+<!-- 								<td>Domestic MMS</td> -->
+<!-- 								<td>13512341234</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 								<td>2016-04-18 12:18:01</td> -->
+<!-- 								<td>Domestic MMS</td> -->
+<!-- 								<td>13512341234</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr> -->
+<!-- 								<td>2016-04-18 12:18:01</td> -->
+<!-- 								<td>Domestic MMS</td> -->
+<!-- 								<td>13512341234</td> -->
+<!-- 							</tr> -->
+<!-- 						</tbody> -->
+<!-- 					</table> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

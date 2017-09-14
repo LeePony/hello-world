@@ -1,0 +1,103 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_TROUBLE_TICKET}}</h3>
+			</div>
+			<div class="box-con">
+				<section class="page-section">
+					<div id="tabs" class="ui-tabs">
+                        <ul class="tabs-nav-list">
+<!--                             <li> -->
+<!--                                 <a href="#tabs-a">My Trouble Ticket</a> -->
+<!--                             </li> -->
+                            <li>
+                                <a href="#tabs-b">{{SC_CREATE}}</a>
+                            </li>
+                        </ul>
+<!--                         <div id="tabs-a" class="ui-tabs-panel"> -->
+<!--                         	<ul class="ticket-list"> -->
+<!-- 								<li> -->
+<!-- 									<div class="ticket-title">This is trouble ticket title</div> -->
+<!-- 									<div class="ticket-date">[ Internet Access ] 2016-04-18</div> -->
+<!-- 									<div class="ticket-description">This is trouble ticket remarks . This is trouble ticket remarks.  This is trouble ticket remarks.  This is trouble ticket  trouble ticket remarks..This is trouble ticket remarks This is trouble ticket remarks.</div> -->
+<!-- 									<div class="ticket-btn"> -->
+<!-- 										<button type="button" class="s-btn untreated">Untreated</button> -->
+<!-- 										<a href="#" id="close-ticket"><i class="iconfont icon-close-copy" aria-hidden="true"></i></a> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+<!-- 								<li> -->
+<!-- 									<div class="ticket-title">This is trouble ticket title</div> -->
+<!-- 									<div class="ticket-date">[ Internet Access ] 2016-04-18</div> -->
+<!-- 									<div class="ticket-description">This is trouble ticket remarks . This is trouble ticket remarks.  This is trouble ticket remarks.  This is trouble ticket  trouble ticket remarks..This is trouble ticket remarks This is trouble ticket remarks.</div> -->
+<!-- 									<div class="ticket-con"> -->
+<!-- 										<div class="ticket-con-img"> -->
+<!-- 											<img src="../../../../images/c-ad.png"> -->
+<!-- 										</div> -->
+<!-- 										<div class="ticket-con-list"> -->
+<!-- 											<div class="content-box"> -->
+<!-- 												<div class="date">2016-04-18 14:35:45</div> -->
+<!-- 												<div class="content">lorem ipsum dolor sit anet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam eratvolutpat.</div> -->
+<!-- 											</div> -->
+											
+<!-- 										</div> -->
+<!-- 									</div> -->
+<!-- 									<div class="ticket-btn"> -->
+<!-- 										<button type="button" class="s-btn processed">Processed</button> -->
+<!-- 										<a href="#" class="v-hidden"><i class="fa fa-times fa-lg" aria-hidden="true"></i></a> -->
+<!-- 									</div> -->
+<!-- 								</li> -->
+<!-- 							</ul> -->
+<!-- 							<div class="show-more"><a href="#">Show More...</a></div> -->
+<!--                         </div> -->
+                        <div id="tabs-b" class="ui-tabs-panel">
+                        	<div class="description">
+								<div><i class="iconfont icon-tishi"></i></div>
+								<ul><li><span> * </span>{{SC_CREATE_DESCRIPTION}}</li></ul>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<form id="emailForm" class="form form-horizontal">
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-3 control-label">{{SC_MOBILE_NUMBER}}</label>
+										<div class="col-xs-12 col-sm-4 input-group">
+											<input id="accNbrInput" type="text" class="form-control form-control-static" readonly value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-3 control-label">{{SC_TYPE}}</label>
+										<div class="col-xs-12 col-sm-4 input-group">
+										  <input id="typeTxt" type="text" class="form-control" data-rule="required;">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-3 control-label">{{SC_TITLE}}</label>
+										<div class="col-xs-12 col-sm-4 input-group">
+										  <input id="titleTxt" type="text" class="form-control" data-rule="required;">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-3 control-label">{{SC_COMMENTS}}</label>
+										<div class="col-xs-12 col-sm-4 input-group">
+											<textarea id="commentsTxt" class="form-control" rows="2" data-rule="required;"></textarea>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-3 control-label">{{SC_CONTACT_NUMBER}}</label>
+										<div class="col-xs-12 col-sm-4 input-group">
+										  <input id="contNbrTxt" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group form-button">
+										<div class="col-sm-offset-3 col-xs-12 col-sm-4 input-group">
+										  <button id="submitBtn" type="button" class="btn btn-primary">{{SC_SUBMIT}}</button>
+										</div>
+									</div>
+								</form>
+							</div>
+                        </div>
+                    </div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,198 @@
+@charset "UTF-8";
+// ===========================================================================
+//  网站头部的样式
+// ===========================================================================
+
+.webpage-header {
+    //padding-right: 12px;
+    @include clearfix;
+    .header-box {
+        width: 100%;
+        height: $page-header-height;
+        background-color: C("white");
+        .header-con {
+            max-width: 1200px;
+            width: 96%;
+            height: $page-header-height - 1;
+            margin: 0 auto;
+            background-color: C("white");
+            @media screen and (max-width: 1200px) {
+                width: 94%;
+            }
+        }
+        & .header-slogan {
+            float: left;
+            height: 100%;
+            border: none;
+            @include clearfix;
+            @media screen and (max-width: 480px) {
+                width: 65%;
+                padding-top: 4px;
+            }
+            & .logo{
+                display: block;
+                height: 100%;
+                overflow: hidden;
+                & .logo-iocn{
+                    float: left;
+                    padding-top: 28px;
+                    @media screen and (max-width: 480px) {
+                        padding-top: 38px;
+                    }
+                    & img{
+                        width: 100%;
+                        display: block;
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        & .header-handle{
+            float: right;
+            border: none;
+            @include clearfix;
+            @media screen and (max-width: 767px) {
+                position: absolute;
+                right: 20px;
+                top: 0;
+            }
+            & .handle-custom-menu{
+                @include clearfix;
+                font-size: 14px;
+                & .menu-ul{
+                    float: right;
+                    @include clearfix;
+                    & li{
+                        position: relative;
+                        float: left;
+                        padding: 38px 10px;
+                        @media screen and (max-width: 1200px) {
+                            &.login-out-box,
+                            &.aside-toggle {
+                                padding: 31px 10px;
+                            }
+                        }
+                        @media screen and (max-width: 767px) {
+                            padding-top: 12px;
+                            &.login-out-box,
+                            &.aside-toggle {
+                                padding-top: 5px;
+                            }
+                        }
+                        .language-list {
+                            display: none;
+                            position: absolute;
+                            right: 10px;
+                            top: 62px;
+                            line-height: 38px;
+                            color: #fff;
+                            font-size: 1em;
+                            z-index: 9;
+                            @media screen and (max-width: 767px) {
+                                top: 36px;
+                            }
+                            div {
+                                width: 104px;
+                                height: 38px;
+                                background-color: #6a6b6b;
+                                padding-left: 16px;
+                                border-bottom: 1px solid #797a7a;
+                                &:first-child {
+                                    border-top-left-radius: 5px;
+                                    border-top-right-radius: 5px;
+                                }
+                                &:last-child {
+                                    border-bottom-left-radius: 5px;
+                                    border-bottom-right-radius: 5px;
+                                    border: none;
+                                }
+                                &:hover {
+                                    background-color: #5e5f5f;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .show-list {
+                            display: block;
+                        }
+                        &.aside-toggle {
+                            display: none;
+                            a{
+                                font-size: 1.8em;
+                            }
+                        }
+                        @media screen and (max-width: 1200px) {
+                            &.login-out-box {
+                                display: block;
+                                a{
+                                    font-size: 1.8em;
+                                }
+                            }
+                            .login-out {
+                                display: none;
+                            }
+                            &.aside-toggle {
+                                display: block;
+                                .menu-info {
+                                    position: absolute;
+                                    right: -10px;
+                                    top: 72px;
+                                    background: #fff;
+                                    border: 1px solid #e6e6e6;
+                                    z-index: 9;
+                                    width: 160px;
+                                    line-height: 1.5em;
+                                    padding: 4px 12px;
+                                    border-radius: 10px;
+                                    @media screen and (max-width: 767px) {
+                                        top: 46px;
+                                    }
+                                    .arrow-top {
+                                        position: absolute;
+                                        right: 20px;
+                                        top: -11px;
+                                        width: 0;
+                                        height: 0;
+                                        border-width: 0 10px 10px 10px;
+                                        border-style: solid;
+                                        border-color: transparent transparent #e6e6e6 transparent;
+                                        span {
+                                            display: block;
+                                            width: 0;
+                                            height: 0;
+                                            border-width: 0 10px 10px 10px;
+                                            border-style: solid;
+                                            border-color: transparent transparent #fff transparent;
+                                            position: absolute;
+                                            top: 2px;
+                                            right: -10px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        a{
+                            display: block;
+                            @include special-font(1em, C("darkgray"));
+                            transition: color .05s,background-color .25s;
+                            &.language-down {
+                                border-right: 1px solid #cbcbcb;
+                                padding-right: 20px;
+                                span {
+                                    padding-right: 5px;
+                                }
+                            }
+                            .icon-logout {
+                                font-size: 1em;
+                            }
+                        }
+                        & a:hover{
+                            color: C("blue");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

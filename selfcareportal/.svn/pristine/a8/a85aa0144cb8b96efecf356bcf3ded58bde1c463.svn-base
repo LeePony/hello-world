@@ -1,0 +1,115 @@
+@charset "UTF-8";
+// ===========================================================================
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+// ===========================================================================
+
+.form-horizontal {
+    padding-bottom: 20px;
+}
+.form {
+    padding: 0 20px;
+    .form-group {
+        margin-right: -15px;
+        margin-left: -15px;
+        margin-bottom: 10px;
+        @media (max-width: 768px) {
+            margin-bottom: 16px;
+        }
+        @include clearfix;
+        &.form-button {
+            margin-top: 44px;
+        }
+    }
+    .control-label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        color: #666;
+        font-size: $base-font-size + 1;
+        @media (max-width: 767px) {
+            padding: 0;
+        }
+        @media (min-width: 768px) {
+            padding-top: 6px;
+            margin-bottom: 0;
+            text-align: right;
+        }
+    }
+    .form-control{
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 8px;
+        font-size: $base-font-size;
+        color: #666;
+        font-family:$font;
+    }
+    textarea.form-control {
+        height: auto;
+    }
+    .form-control-static {
+        border: none;
+        padding-left: 0;
+        background-color: transparent;
+        box-shadow: none;
+        @media (max-width: 768px) {
+            height: auto;
+            padding: 2px 0;
+        }
+    }
+    .lost-active {
+        @include special-font($base-font-size + 1, C("blue"));
+    }
+    .num-active {
+        color: C("red");
+    }
+    .num {
+        @include special-font($base-font-size + 1, #f79e02);
+    }
+    .static-inline {
+        display: inline-block;
+    }
+    & .form-help-box {
+        position: relative;
+        & .form-help{
+            display: block;
+            position: absolute;
+            top: 2px;
+            right: -28px;
+            z-index: 9;
+            cursor:pointer;
+            color: C("blue");
+            i {
+                @include special-font($base-font-size + 8, C("blue"));
+            }
+        }
+        & .form-get {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 9;
+            cursor:pointer;
+        }
+        & .form-eye {
+            position: absolute;
+            top: 6px;
+            right: 24px;
+            z-index: 9;
+            cursor: pointer;
+        }
+    }
+    .other-info {
+        color: #666;
+        line-height: 34px;
+    }
+}
+@media (max-width: 768px) {
+  .form-padding {
+    padding-left: 42px;
+  }
+}
+//设置textarea 无法拖动改变大小
+textarea{
+    resize: none;
+}

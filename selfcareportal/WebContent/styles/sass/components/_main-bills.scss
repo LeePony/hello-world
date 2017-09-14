@@ -1,0 +1,82 @@
+@charset "UTF-8";
+// ===========================================================================
+//  bills info
+// ===========================================================================
+.bills-info {
+    border: 1px solid C("borderColor");
+    padding-top: 48px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    .list-group {
+        margin-bottom: 18px;
+        @include clearfix;
+        color: C("lightgray");
+    }
+    .control-label {
+        text-align: right;
+    }
+}
+.bills-box {
+    background-color: #dedcdc;
+    @include clearfix;
+}
+.bills-info-left {
+    padding: 15px;
+    font-size: $base-font-size + 1;
+    .list-group {
+        height: 62px;
+        label {
+            display: block;
+            height: 30px;
+            color: #666;
+        }
+        .control {
+            @include special-font($base-font-size, #555);
+            padding: 0;
+            height: auto;
+            min-height: auto;
+        }
+        .amount-value {
+            font-size: $base-font-size + 4;
+            color: C("blue");
+        }
+        .normal-weight {
+            text-shadow: 0 0;
+        }
+    }
+}
+.bills-info-right {
+    min-height: 360px;
+    padding: 15px;
+    background-color: #f0eeee;
+    border-left: 1px solid C("white");
+    font-size: $base-font-size + 1;
+    color: #333;
+    @media (max-width: 767px) {
+        border: none;
+    }
+    .list-group {
+        margin-bottom: 0;
+        .control-label {
+            text-align: left;
+            padding-top: 6px;
+        }
+        .control {
+            text-align: right;
+        }
+        .red {
+            color: #fd0101;
+        }
+        .strong {
+            @include special-font($base-font-size, #333);
+        }
+        &.yellow {
+            height: 50px;
+            margin-top: 5px;
+            padding-top: 15px;
+            border-top: 1px solid #d2d2d2;
+            color: #f79e02;
+            text-shadow: 0.4px 0 0 #f79e02;
+        }
+    }
+}

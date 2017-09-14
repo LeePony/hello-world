@@ -1,0 +1,168 @@
+@charset "UTF-8";
+// ===========================================================================
+//  Add-On-Offer模块,
+// ===========================================================================
+.price-plan{
+    margin-bottom: 50px;
+    @at-root .price-group{
+        margin: 15px;
+        @media screen and (max-width: 767px) {
+            margin: 5px;
+        }
+        @at-root .price-group-item{
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            margin-bottom: -1px;
+            background-color: C("white");
+            transition: background-color .25s;
+            color: C("darkgray");
+            font-size: 14px;
+            @media screen and (max-width: 767px) {
+                .first {
+                    padding-right: 0;
+                }
+                .second {
+                    padding-right: 0;
+                }
+                .third {
+                    padding-right: 8px;
+                }
+            }
+            @media screen and (max-width: 480px) {
+                .first {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+                .second {
+                    width: 100%;
+                }
+                .third {
+                    width: 100%;
+                }
+            }
+            &:nth-child(odd) {
+                background-color:#f0eeee;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            & .item-label {
+                @include special-font(1em, C("darkgray"));
+            }
+            & .item-text {
+                line-height: 2;
+                @include ellipsis;
+                font-size: 1em;
+            }
+            @media screen and (min-width: 480px) {
+                & .des.item-text {
+                    line-height: 2.7;
+                }
+            }
+            & .cash {
+                @include special-font(1.286em, #f79e02);
+            }
+            & .free {
+                @include special-font(1.286em, #79ba00);
+            }
+            & button{
+                margin-top:15px;
+                margin-right:0;
+                float: right;
+                @media screen and (max-width: 767px) {
+                    min-width: 60px;
+                    padding: 8px 10px;
+                }
+                @media screen and (max-width: 480px) {
+                    float: left;
+                }
+            }
+        }
+    }
+    @at-root  .accordion{
+        margin: 15px;
+        @media screen and (max-width: 767px) {
+            margin: 5px;
+        }
+        @at-root .accordion-menu{
+            position: relative;
+            display: block;
+            margin-bottom: -1px;
+            background-color: C("white");
+            cursor: pointer;
+            &:nth-child(odd) {
+                background-color:#f0eeee;
+            }
+            &:last-child{
+                margin-bottom: 0;
+            }
+            & > .menu-title{
+                @include special-font(1em, C("darkgray"));
+                line-height: 1.5;
+                padding: 10px;
+            }
+            & .menu-title > .menu-iocn-up,
+            & .menu-title > .menu-iocn-down{
+                position:absolute;
+                display: block;
+                top: 5px;
+                right: 8px;
+                width: 32px;
+                text-align: center;
+                cursor:pointer;
+            }
+            & .menu-title > .menu-iocn-down{
+                display: block;
+            }
+            & .menu-title > .menu-iocn-up{
+                display: none;
+            }
+            &.menu-open .menu-title > .menu-iocn-down{
+                display: none;
+            }
+            &.menu-open .menu-title > .menu-iocn-up{
+                display: block;
+                top: 4px;
+            }
+            &.section-open{
+                background-color:#f7f7f7;
+            }
+            & .menu-section{
+                display: none;
+            }
+            & .section-open{
+                display: block;
+            }
+            & .price-group{
+                margin: 0;
+            }
+            & .price-group-item{
+                background-color:#f7f7f7;
+                padding: 10px 2 0px;
+                border-top: 1px solid C("white");
+            }
+        }
+    }
+}
+.back-to-top {
+    position:fixed;  
+    display:none;
+    bottom:30px;  
+    right:30px;
+    background: rgba(255, 243, 152, 0.6);
+    border: 1px solid #d9802b;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;cursor: pointer;
+    span {
+        display:block;
+        padding-top: 6px;
+        font-size: 16px;
+    }
+    a {
+        padding-top:10px;
+        color:#4c4c4c;
+    }
+}

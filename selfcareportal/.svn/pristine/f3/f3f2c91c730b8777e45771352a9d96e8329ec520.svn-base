@@ -1,0 +1,132 @@
+@charset "UTF-8";
+// ===========================================================================
+//  页面整体布局的样式
+// ===========================================================================
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: $font;
+}
+
+// 设置基准字体大小
+body { font-size: $base-font-size; background-color: C("boxbgColor");}
+
+.webpage-wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: $page-max-width;
+    min-width: 308px;
+    background-color: C("boxbgColor");
+    margin: 0 auto;
+    position: relative;
+    @at-root .webpage-header {
+        //position: fixed;
+        width: 100%;
+        height: $page-header-height;
+        //z-index: 99;
+    }
+    @at-root .webpage-ad-box {
+        //padding-top: $page-header-height;
+    }
+    @at-root .webpage-ad {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: $main-magrin-bottom;
+        img {
+          width: 100%;
+        }
+        @media screen and (max-width: 767px) {
+            margin-bottom: 10px;
+        }
+    }
+    @at-root .webpage-content {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        overflow-y: hidden;
+        margin-bottom: 20px;
+        @media screen and (max-width: 1200px) {
+            width: auto;
+            margin: 0 20px;
+        }
+        @media screen and (max-width: 767px) {
+            margin: 0 10px;
+        }
+        @at-root .webpage-content-inner {
+            min-height: 100%;
+            padding-top: $content-padding-top;
+            background-color: C("white");
+        }
+    }
+    @at-root .webpage-footer {
+        height: $page-footer-height;
+    }
+    @media screen and (max-width: 1024px) {
+        .bottom-fill {
+            display: none;
+            position: absolute;
+            top: 98px;
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            &.show {
+                display: block;
+            }
+            .overlay {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+.webpage-content-inner {
+    display: table;
+    width: 100%;
+    @media (max-width: 767px) {
+        display: block;
+    }
+    @at-root .content-aside {
+        display: table-cell;
+        float: left;
+        width: $aside-width;
+        background-color: C("white");
+        transition: width .35s,visibility .35s;
+        vertical-align: top;
+        @media screen and (max-width: 1200px) {
+            display: none;
+            position: absolute;
+            z-index: 99;
+            top: 98px;
+            right: 0;
+            box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+            &.close-aside{
+                display: none;
+            }
+            &.show-aside{
+                display: block;
+            }
+        }
+    }
+
+    @at-root .content-main {
+        display: table-cell;
+        height: 100%;
+        overflow: hidden;
+        border-left: 15px solid #efefef;
+        width: 885px;
+        vertical-align: top;
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+        @media screen and (max-width: 768px) {
+            font-size: .875em;
+        }
+    }
+}

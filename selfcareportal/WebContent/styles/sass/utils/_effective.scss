@@ -1,0 +1,261 @@
+@charset "UTF-8";
+// ===========================================================================
+//  简化常用样式的写法
+// ----------------------------------index------------------------------------
+//    clearfix               清除浮动
+//    ellipsis               超出一行的文字以...显示
+//    e/m                    BEM命名法，快速添加前缀
+//    generate-grid          生成类似 bootstrap 的栅格系统
+//    overflow-hidden        内容超出范围时隐藏
+//    retina                 引入retina图像
+//    size                   同时写元素宽度高度
+//    vertical-center        文字垂直居中
+// ===========================================================================
+
+// =============================================================
+//  常用样式
+// =============================================================
+@mixin special-font($size, $color) {
+    font-size: $size;
+    color:$color;
+    //text-shadow: 0.4px 0 0 $color;
+    font-weight: 600;
+}
+.shadow {
+    //text-shadow: 0.4px 0 0 C("darkgray");
+    font-weight: 600;
+}
+.blue-color {
+    color: C("blue");
+}
+
+
+// =============================================================
+//  清除浮动
+// =============================================================
+@mixin clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+
+
+// =============================================================
+//  投射阴影
+// @depth 表示层级，层级越大，阴影越深，默认为3，最大为5
+// @hover 表示是否包含悬停样式，默认为 true
+// @active 表示是否包含点击样式，默认为 false
+// =============================================================
+@mixin drop-shadow($depth: 2) {
+    $shadow: (
+        1: "0 1px 6px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24)",
+        2: "0 3px 6px rgba(0,0,0, .16), 0 3px 6px rgba(0,0,0, .23)",
+        3: "0 10px 20px rgba(0,0,0, .19), 0 6px 6px rgba(0,0,0, .23)",
+        4: "0 14px 28px rgba(0,0,0, .25), 0 10px 10px rgba(0,0,0, .22)",
+        5: "0 19px 38px rgba(0,0,0, .30), 0 15px 12px rgba(0,0,0, .22)",
+        6: "0 23px 42px rgba(0,0,0, .32), 0 19px 15px rgba(0,0,0, .22)"
+    );
+
+    box-shadow: #{map-get($shadow, $depth)};
+
+}
+
+
+
+
+// =============================================================
+//  超出一行的文字以...显示
+// =============================================================
+@mixin ellipsis($substract:0) {
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    width         : 100% - $substract;
+}
+
+
+
+
+// =============================================================
+//  BEM命名法，快速添加前缀
+//  参考：http://unakravets.tumblr.com/post/64113156740/sass-3-3-at-root-bem
+//  注：不可在mixin内部使用
+// =============================================================
+
+//element 用 "__" 链接
+@mixin E($name) {
+    @at-root  &__#{$name} {
+        @content;
+    }
+}
+
+//modifier 用 "--" 链接
+@mixin M($name) {
+    @at-root  &--#{$name} {
+        @content;
+    }
+}
+
+//兼容小写形式
+@mixin e($name) { @include E($name) };
+@mixin m($name) { @include M($name) };
+
+
+
+
+// =============================================================
+//  生成类似 bootstrap 的栅格系统
+// =============================================================
+@mixin generate-grid(
+    $column: 12,
+    $gap: 30px,
+    $breakpoints: 768px 992px 1200px,
+    $name: xs sm md lg
+) {
+    @at-root .row {
+        margin-left: 0 - $gap/2;
+        margin-right: 0 - $gap/2;
+    }
+
+    %column {
+        display: block;
+        box-sizing: border-box;
+        position: relative;
+        min-height: 1px;
+        float: left;
+        padding-left: $gap/2;
+        padding-right: $gap/2;
+    }
+
+    @for $i from 1 to length($breakpoints) + 2 {
+        $min-width: 0;
+        $max-width: 99999px;
+        @if $i > 1 {
+            $min-width: nth($breakpoints, $i - 1);
+        }
+
+        @if $i <= length($breakpoints) {
+            $max-width: nth($breakpoints, $i) - 1;
+        }
+
+        // 添加公共样式
+        @for $col from 1 to $column + 1 {
+            .col-#{nth($name, $i)}-#{$col} {
+                @extend %column;
+            }
+        }
+
+        // 添加媒体查询样式
+        @media (min-width: $min-width) and (max-width: $max-width) {
+            @for $col from 1 to $column + 1 {
+                .col-#{nth($name, $i)}-#{$col} {
+                    width: 100% / $col;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// =============================================================
+//  内容超出范围时隐藏
+// =============================================================
+@mixin overflow-hidden {
+    overflow: hidden;
+    &:before {
+        content: "";
+        display: block;
+        width  : 0;
+        height : 100%;
+    }
+}
+
+
+
+// =============================================================
+//  相对/绝对/固定定位的快速写法
+//  使用方法：@include position(fixed, null 10px 24px auto);
+//  参考bourbon项目
+// =============================================================
+@mixin position($position: relative, $coordinates: null null null null) {
+
+    @if type-of($position) == list {
+        $coordinates: $position;
+        $position: relative;
+    }
+    //$coordinates: unpack($coordinates);
+
+    $top   : nth($coordinates, 1);
+    $right : nth($coordinates, 2);
+    $bottom: nth($coordinates, 3);
+    $left  : nth($coordinates, 4);
+
+    position: $position;
+
+    @if ($top and $top == auto) or (type-of($top) == number) {
+        top: $top;
+    }
+    @if ($right and $right == auto) or (type-of($right) == number) {
+        right: $right;
+    }
+    @if ($bottom and $bottom == auto) or (type-of($bottom) == number) {
+        bottom: $bottom;
+    }
+    @if ($left and $left == auto) or (type-of($left) == number) {
+        left: $left;
+    }
+}
+
+
+
+
+// =============================================================
+//  引入retina图像
+// =============================================================
+@mixin retina($image, $width, $height) {
+    @media (min--moz-device-pixel-ratio: 1.3),
+        (-o-min-device-pixel-ratio: 2.6/2),
+        (-webkit-min-device-pixel-ratio: 1.3),
+        (min-device-pixel-ratio: 1.3),
+        (min-resolution: 1.3dppx) {
+            /**/
+            background-image: url($image);
+            background-size: $width $height;
+        }
+}
+
+
+
+// =============================================================
+//  同时写元素宽度高度
+// =============================================================
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+
+
+// =============================================================
+//  文字垂直居中
+// =============================================================
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}

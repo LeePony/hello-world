@@ -1,0 +1,90 @@
+@charset "UTF-8";
+// ===========================================================================
+//  提取主题中相应配置的颜色
+//  在函数内部预定义了网站的配色主题
+//  使用方法：background-color: C("body-bg");
+//  注：调用函数前需要配置 $website-theme 变量
+// ===========================================================================
+@function C($component, $state: "hover && active && focus") {
+    // =============================================================
+    //  定义配色方案
+    //  根据不同风格设置不同的主题
+    // =============================================================
+    $themes: (
+        //所有主题的公用配色，在不同主题中，可以将其覆盖
+        common: (
+            "default"       :#252525,
+            "darkgray"      :#555,
+            "blue"          :#024ea2,
+            "boxbgColor"    :#efefef,
+            "hoverColor"    :#fafafa,
+            "borderColor"   :#ddd,
+            "titbgColor"    :#e0e0e0,
+
+            "lightgray"     :#999,
+            "red"           :#db261d,
+            "white"         :#fff,
+
+            "lightblue"     :#cbe3fc,
+            "lightgreen"    :#d0e9aa,
+            "lightyellow"   :#ffe5a1,
+            "lightorage"    :#fc8901
+            
+        ),
+
+        default: (
+        ),
+
+        // 其他配色方案
+        light: (),
+        dark: ()
+    );
+
+
+    // =============================================================
+    //  函数主体
+    //  用于提取themes中预定义的颜色
+    // =============================================================
+    $common: map-get($themes, common);
+    $current: map-get($themes, $website-theme);
+    $color: transparent;
+
+    @if map-has-key($current, $component) {
+        $color: map-get($current, $component);
+    } @else {
+        @if map-has-key($common, $component) {
+            $color: map-get($common, $component);
+        }
+    } @else {
+        @warn "Waring: `#{$common}和#{$current}中不含#{$component}属性！`";
+    }
+
+    @if ($state == "hover") {
+        @return lighten($color, 6%);
+    }
+
+    @if ($state == "active") {
+        @return darken($color, 4%);
+    }
+
+    @return $color;
+} // end of C
+
+
+
+// 允许函数名小写
+@function c($component) {
+    @return C($component)
+}
+.bg-red{
+    background-color:C("red") !important;
+}
+.bg-blue{
+    background-color:C("blue") !important;
+}
+.bg-white{
+    background-color:C("white") !important;
+}
+.bg-gray{
+    background-color:C("gray") !important;
+}

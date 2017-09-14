@@ -1,0 +1,127 @@
+@charset "UTF-8";
+// ===========================================================================
+//  table 样式
+// ===========================================================================
+.ui-jqgrid-view {
+    .ui-jqgrid-hdiv {
+        border-color: transparent;
+        background: #fbfbfb;
+        border-bottom: 1px solid #eaeaea;
+        .ui-jqgrid-htable {
+            background-color: #f9f9f9;
+            color: @textColor;
+            .ui-th-column {
+                padding: 12px 0 12px 8px;
+                border-right: 1px solid #fbfbfb;
+            }
+        }
+    }
+    .ui-jqgrid-bdiv {
+        border-color: transparent;
+        border-top: 1px solid #eaeaea;
+        background-color: #fff;
+        .ui-jqgrid-btable {
+            tr.jqgrow {
+                &:hover {
+                    background-color: #fff8e4;
+                }
+                td {
+                    border-bottom: 1px solid #f1f1f1;
+                    border-right: 1px solid transparent;
+                    padding: 10px;
+                }
+            }
+            tr.ui-state-highlight {
+                background-color: #fff8e4;
+                color: @textColor;
+                a {
+                    color: @primaryColor;
+                    &:hover {
+                        color: @accentColor;
+                    }
+                }
+                &:hover {
+                    background-color: #fff8e4 !important;
+                }
+                .btn {
+                    color: @textColor;
+                }
+                .btn-default:hover {
+                    color: @primaryColor;
+                }
+            }
+            .btn-default:hover {
+                background-color: #fff; 
+                border-color: @borderColor; 
+                color: @primaryColor;
+            }
+            .icon-Active {
+                font-size: 24px;
+                color: #0faa3f;
+            }
+            .icon-Suspend {
+                font-size: 24px;
+                color: #ff9d6a;
+            }
+            .icon-online {
+                font-size: 32px;
+                color: #feca2d;
+            }
+            .icon-offline {
+                font-size: 32px;
+                color: #cecdcd;
+            }
+            p {
+                margin: 0;
+                color: @fontColor;
+            }
+        }
+    }
+}
+.jqgrow:nth-child(2n+1) {
+    background-color: #f9f9f9;
+}
+.ui-jqgrid-pager {
+    padding: 8px 0;
+    height: auto;
+    border: 0;
+    border-left: 1px solid @mainColor;
+    border-right: 1px solid @mainColor;
+    .ui-pg-control .pagination > li.active > a {
+        border: 1px solid @accentColor;
+        font-weight: normal;
+        background-color: @accentColor;
+    }
+    @media screen and (max-width: @max-sm) {
+        .ui-pg-control .pagination {
+            display: block;
+            text-align: right;
+        }
+    }
+    @media screen and (max-width: @max-xs) {
+        .pagination>li {
+            float: left;
+            height: 22px;
+        }
+        .pagination>li.rowtext {
+            float: right;
+        }
+    }
+}
+.ui-jqgrid {
+    border-bottom: 1px solid @mainColor;
+}
+.pagination {
+    &>.active {
+        &>a,
+        &>span,
+        &>a:hover,
+        &>span:hover,
+        &>a:focus,
+        &>span:focus {
+            background-color: @accentColor;
+            border-color: @accentColor;
+        }
+    }
+
+}

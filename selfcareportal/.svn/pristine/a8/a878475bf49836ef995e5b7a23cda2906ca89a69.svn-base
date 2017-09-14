@@ -1,0 +1,36 @@
+<div class="login-tit">{{SC_SIGN_UP}}</div>
+<div class="login-con">
+	<form id='signUpForm' class="form-box">
+		<div class="from-group">
+			<input type="text" id="mobile" data-rule="required" class="form-control user-text user-name" name="" placeholder="{{SC_MOBILE_NUMBER}}" maxlength="">
+		</div>
+
+		<div class="from-group form-help-box mt-10">
+			<input type="password" id="password1" data-rule="required;length[8~16];filter"  class="form-control user-text user-pwd" name="password" placeholder="{{SC_PASSWORD}}" onpaste="return false" onselectstart="return false">
+			<span style="position: absolute; right: 10px; top: 12px;">
+				<i id="passwordImgClose1" class="fa fa-eye" style="display: none;"></i>
+				<i id="passwordImg1" class="fa fa-eye-slash"></i>
+			</span>
+			<label id="securityLevel" style="padding-left: 9px;padding-top: 4px;">{{SC_SECURITY_LEVEL}}:</label>
+			<!-- <input type="text" id='securityLevel' class="control-label" readonly value="{{SC_SECURITY_LEVEL}}">-->
+		</div>
+		<div class="from-group form-help-box">
+			<input type="password" id="repeatPassword" data-rule="required;match(password);filter" class="form-control user-text user-pwd" name="repeatpassword" placeholder="{{SC_REPEAT_PWD}}" onpaste="return false" onselectstart="return false">
+			<span style="position: absolute; right: 10px; top: 12px;">
+				<i id="repeatPwdImgClose" class="fa fa-eye" style="display: none;"></i>
+				<i id="repeatPwdImg" class="fa fa-eye-slash"></i>
+			</span>
+		</div>
+		<div class="from-group">
+			<input type="text" id="code" data-rule="required" class="form-control user-text user-code" placeholder="{{SC_VER_CODE}}" maxlength="">
+			<button type="button" id='getSignCode' class="get-Verify-code">{{SC_GET}}</button>
+			<!--<a href="javascript:void(0)" id='getSignCode' class="get-Verify-code">Get</a> -->
+		</div>
+		<div class="from-group">
+			<button id='regist_btn' type="button" class="regist-btn">{{SC_REGISTRATION}}</button>
+		</div>
+	</form>
+</div>
+<div class="regist-info">
+	<p>{{SC_HAVE_ACCOUNT}} ? <a href="#" id="signIn"> {{SC_LOGIN}} !</a></p>
+</div>

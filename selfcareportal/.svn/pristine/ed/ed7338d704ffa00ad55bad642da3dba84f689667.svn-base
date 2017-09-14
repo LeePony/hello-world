@@ -1,0 +1,43 @@
+<div class="webpage-ad">
+    <div class="slide">
+        <div class="slide-img" id='adDiv'>
+         <!--   <div class="slide-list"><img src="images/main-ad.png" width="100%" height="100%" alt="ad"></div>
+          <div class="slide-list"><img src="images/main-ad2.png" width="100%" height="100%" alt="ad"></div> -->
+        </div>
+        <div class="slide-btn"></div>
+    </div>
+</div>
+<div class="personal-info-list">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 first">
+            <div class="name">
+                <i class="iconfont icon-user" aria-hidden="true"></i>
+                <span id='customerName'> </span>, {{SC_WELCOME}}
+            </div>
+            <div>
+                <label>{{SC_YOUR_NUMBER}} </label>
+                <span class="mobile-num" id='mobileNumberLabel'></span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 middle">
+            <div>
+                <label>{{SC_SUBSCRIPTION}} :</label>
+                <span class="shadow" id='subsPlanLabel'></span>
+            </div>
+            <div>
+                <label>{{SC_PAID_TYPE}} :</label>
+                <span class="shadow" id='paidTypeLabel'></span>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 last">
+            <div>
+                <label>{{SC_STATUS}} :</label>
+                <span id="viewDetail" class="shadow blue-color"><span id='statusLabel'></span> <i class="iconfont icon-chakan" aria-hidden="true" id='hover'></i></span>
+            </div>
+            <div>
+                <label>{{SC_ACTIVE_SINCE}} :</label>
+                <span class="shadow" id='activeLabel'></span>
+            </div>
+        </div>
+    </div>
+</div>

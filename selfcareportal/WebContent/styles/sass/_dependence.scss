@@ -1,0 +1,21 @@
+@charset "UTF-8";
+// ===========================================================================
+//  引入所有依赖文件
+//  注：此文件不应当编译输出任何样式
+// ===========================================================================
+
+// 引入基本配置
+@import "./base/settings";
+
+// 引入布局参数
+@import "./base/layouts";
+
+// 引入配色方案
+$website-theme: default !default;
+@import "./base/themes";
+
+
+// 引入所依赖的 mixin
+@import "./utils/effective";
+@import "./utils/mixins";
+@import "./utils/responsive";

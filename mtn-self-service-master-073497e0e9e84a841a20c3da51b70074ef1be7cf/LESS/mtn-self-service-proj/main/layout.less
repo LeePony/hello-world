@@ -1,0 +1,661 @@
+@charset "UTF-8";
+// ===========================================================================
+//  重置样式
+// ===========================================================================
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+	font-size: @base-font-size;
+    font-family: @font;
+}
+ul, li {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin: 0;
+}
+.float-left {
+    float: left !important;
+}
+.float-right {
+    float: right !important;
+}
+// ===========================================================================
+//  布局
+// ===========================================================================
+.login-wrapper {
+    min-height: 660px;
+    height: 100%;
+    min-width: @page-min-width;
+    width: 100%;
+    background: #ffa420;
+    background: -webkit-linear-gradient(left, #ff8008, #ffc837);
+    background: -o-linear-gradient(right, #ff8008, #ffc837);
+    background: -moz-linear-gradient(right, #ff8008, #ffc837);
+    background: linear-gradient(to right, #ff8008, #ffc837);
+    margin: 0 auto;
+    position: relative;
+}
+.webpage-wrapper {
+    width: 100%;
+    min-height: 100%;
+    min-width: @page-min-width;
+    background-color: @contentBg;
+    margin: 0 auto;
+    position: relative;
+    .webpage-header {
+        width: 100%;
+        height: @page-header-height;
+    }
+    .webpage-ad-box {
+        //padding-top: @page-header-height;
+    }
+    .webpage-ad {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: @main-magrin-bottom;
+        @media screen and (max-width: @max-sp) {
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .webpage-content {
+        margin-top: 20px;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        background: #f0f0f0;
+        @media screen and (max-width: @max-sp) {
+            width: auto;
+        }
+        .webpage-content-inner {
+            width: 1200px;
+            margin: 0 auto;
+            min-height: 100%;
+            height: auto;
+            @media screen and (max-width: @max-sp) {
+                padding: 0 10px 10px;
+                background: none;
+            }
+        }
+    }
+    @media screen and (max-width: @max-sp) {
+        .bottom-fill {
+            display: none;
+            position: absolute;
+            top: 96px;
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            &.show {
+                display: block;
+            }
+            .overlay {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+.webpage-content-inner {
+    display: table;
+    @media (max-width: @max-sm) {
+        display: block;
+    }
+    .content-aside {
+        display: table-cell;
+        // float: left;
+        width: @aside-width;
+        transition: width .35s,visibility .35s;
+        vertical-align: top;
+        background-color: #fff;
+        @media screen and (max-width: @max-sp) {
+            display: none;
+            position: absolute;
+            z-index: 99;
+            top: 96px;
+            right: 0;
+            box-shadow: -3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+            &.close-aside{
+                display: none;
+            }
+            &.show-aside{
+                display: block;
+            }
+        }
+    }
+    .content-margin {
+        display: table-cell;
+        width: 15px;
+        background-color: @contentBg;
+        @media screen and (max-width: @max-sp) {
+            display: none;
+        }
+    }
+    .content-main {
+        overflow: hidden;
+        display: table-cell;
+        width: 1200 - @aside-width - 15;
+        height: 100%;
+        background-color: @defaultBg;
+        vertical-align: top;
+        @media screen and (max-width: @max-sp) {
+            width: 100%;
+            border: none;
+            display: block;
+        }
+    }
+}
+
+.content-box {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: @defaultBg;
+    padding: 20px 32px;
+}
+// ===========================================================================
+//  网站头部的样式
+// ===========================================================================
+
+.webpage-header {
+    .clearfix;
+    .header-box {
+        width: 100%;
+        height: @page-header-height;
+        background-color: #010101;
+        .header-con {
+            position: relative;
+            max-width: @page-width;
+            width: 100%;
+            height: @page-header-height;
+            margin: 0 auto;
+            @media screen and (max-width: @max-sp) {
+                width: 94%;
+            }
+        }
+        .header-slogan {
+            float: left;
+            height: 100%;
+            border: none;
+            .clearfix;
+            & .logo{
+                display: block;
+                height: 100%;
+                overflow: hidden;
+                & .logo-iocn{
+                    float: left;
+                    & img{
+                        width: 180px;
+                        display: block;
+                        vertical-align: middle;
+                    }
+                    @media screen and (min-width: @min-sm) {
+                        & img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .header-handle{
+            position: absolute;
+            right: 0;
+            width: 130px;
+            height: 100%;
+            border: none;
+            .clearfix;
+            & .handle-custom-menu{
+                .clearfix;
+                font-size: 14px;
+                & .menu-ul{
+                    float: right;
+                    .clearfix;
+                    & li{
+                        position: relative;
+                        float: left;
+                        padding: 12px 4px;
+                        @media screen and (max-width: @max-sp) {
+                            padding: 32px 4px;
+                        }
+                        .iconfont {
+                            float: left;
+                            font-size: 28px;
+                        }
+                        span {
+                            line-height: 28px;
+                        }
+                        .language-list {
+                            display: none;
+                            position: absolute;
+                            right: 10px;
+                            top: 72px;
+                            line-height: 38px;
+                            color: #fff;
+                            z-index: 9;
+                            div {
+                                width: 104px;
+                                height: 38px;
+                                background-color: #6a6b6b;
+                                padding-left: 16px;
+                                border-bottom: 1px solid #797a7a;
+                                &:first-child {
+                                    border-top-left-radius: 5px;
+                                    border-top-right-radius: 5px;
+                                }
+                                &:last-child {
+                                    border-bottom-left-radius: 5px;
+                                    border-bottom-right-radius: 5px;
+                                    border: none;
+                                }
+                                &:hover {
+                                    background-color: #5e5f5f;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .icon-user{
+                            font-size: 18px;
+                        }
+                        .icon-logout,{
+                            font-size: 22px;
+                        }
+                        .show-list {
+                            display: block;
+                        }
+                        &.aside-toggle {
+                            display: none;
+                            a{
+                                font-size: 180%;
+                            }
+                        }
+                        @media screen and (max-width: @max-sp) {
+                            display: none;
+                            &.login-out-box {
+                                display: block;
+                                .icon-logout{
+                                    font-size: 180%;
+                                }
+                            }
+                            .login-out {
+                                display: none;
+                            }
+                            &.aside-toggle {
+                                display: block;
+                            }
+                        }
+                        a{
+                            display: block;
+                            color: @mainColor;
+                            transition: color .05s,background-color .25s;
+                            &.language-down {
+                                border-right: 1px solid #cbcbcb;
+                                padding-right: 20px;
+                                line-height: 2;
+                                span {
+                                    padding-right: 5px;
+                                }
+                            }
+                            &.user-name{
+                                border-right: 1px solid #cbcbcb;
+                            }
+                        }
+                        & a:hover{
+                            color: @accentColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===========================================================================
+// menu
+// ===========================================================================
+
+.menu {
+    margin-left: 14px;
+    > li {
+        position: relative;
+        float: left;
+        > a {
+            display: inline-block;
+            padding: 21px 16px;
+            color: #fff;
+            &:hover,
+            &:focus {
+                color: @accentColor;
+                text-decoration: none;
+            }
+        }
+        &.cur-menu {
+            a {
+                color: @accentColor;
+            }
+        }
+    }
+}
+.sub-menu-box {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 62px;
+    background-color: #010101;
+    z-index: 99;
+    > ul > li {
+        float: left;
+        > a {
+            display: inline-block;
+            visibility: hidden;
+            padding: 0 16px;
+        }
+        > img {
+            visibility: hidden;
+        }
+    }
+    .sub-menu {
+        position: relative;
+        top: -20px;
+        li {
+            > a {
+                display: inline-block;
+                padding: 6px 0 0 14px;
+                color: #ccc;
+                font-size: 13px;
+            }
+            &.cur-menu {
+                a {
+                    color: @accentColor;
+                }
+            }
+        }
+    }
+}
+.open {
+    .dropdown-menu {
+        display: block;
+    }
+}
+// ===========================================================================
+//  页面的菜单组件样式
+// ===========================================================================
+
+.page-menu{
+    overflow: hidden;
+    color: #444;
+    font-size: 15px;
+    white-space: nowrap;
+    .root-menu{
+        white-space: nowrap;
+        overflow: hidden;
+        @media screen and (max-width: @max-sp){
+             border-left: 0;
+        }
+        & > .page-menu-item{
+            user-select: none;
+            border-left: 4px solid transparent;
+            transition: border-color .25s;
+            & > .menu-item-cell {
+                position: relative;
+                border-bottom: 1px solid #eaeadc;
+                cursor:pointer;
+                padding: 1em;
+                i{
+                    width: 1.6em;
+                    font-size: 20px;
+                }
+                .has-child {
+                    position: absolute;
+                    right: 18px;
+                    top: 15px;
+                }
+            }
+            .sub-menu {
+                display: none;
+                & > .page-menu-item {
+                    user-select: none;
+                    & > .menu-item-cell {
+                        border-bottom: 1px solid @menuBoderColor;
+                        cursor:pointer;
+                        padding: 1em;
+                        padding-left: 60px;
+                        transition: color .25s, font-weight .25s;
+                        white-space: normal;
+                    }
+                    &:hover, &:focus, &.child-active{
+                        & > .menu-item-cell {
+                            .special-font(1em, @menuColor);
+                        }
+                    }
+                }
+            }
+            &:hover, &:focus, &.active{
+                border-left: 4px solid @menuColor;
+                & > .menu-item-cell {
+                    .special-font(1em, @menuColor);
+                }
+            }
+        }
+        & > .page-menu-item{
+
+
+        }
+        & > .page-menu-item.child-active{
+            background-color: @defaultBg;
+            border-left: 4px solid @menuColor;
+            & > .menu-item-cell {
+                .special-font(1em, @menuColor);
+            }
+
+        }
+    }
+}
+// ===========================================================================
+//  个人信息
+// ===========================================================================
+
+.personal-info-list {
+    max-width: @page-width;
+    width: auto;
+    margin: 0 auto;
+    padding: @main-magrin-bottom 15px;
+    margin-bottom: @main-magrin-bottom;
+    background-color: @defaultBg;
+    color: @defaultColor;
+    font-size: 14px;
+    border:1px solid #e5e5e5;
+    position:relative;
+    @media screen and (max-width: @max-lg) {
+        margin: @main-magrin-bottom;
+    }
+    @media screen and (max-width: @max-sm) {
+        padding: 10px;
+        margin: 10px;
+    }
+    //用户信息缩放按钮及相关媒体查询
+    .other-info-Toggle{
+        display: none;
+    }
+    @media screen and (max-width: @max-sp) {
+        .other-info-Toggle{
+        display: block;
+        position:absolute;
+        bottom:-34px;
+        left:0px;
+        width: 100%;
+        height: 34px;
+        text-align: center;
+        border: 1px solid #e5e5e5;
+        cursor: pointer;
+            & > i:first-child{
+                display: block;
+            }
+            & > i:last-child{
+                display: none;
+            }
+            &.active >i:first-child{
+                display: none;
+            }
+            &.active >i:last-child{
+                display: block;
+            }
+        }
+        i{
+            font-size: 30px;
+        }
+        .middle ,.last{
+            display: none;
+        }
+        &.open {
+            .middle ,.last{
+            display: block;
+            }
+        }
+
+    }
+
+    .row {
+        line-height: 34px;
+        // @media screen and (min-width: @min-sp){
+        //     .first,.middle,.last{
+        //         & div:first-child{
+        //             margin-bottom:8px;
+        //         }
+        //     }
+        // }
+        label {
+            display: inline-block;
+            float: left;
+            width: 120px;
+            text-align: right;
+            font-weight: normal;
+            @media screen and (max-width: @max-sp) {
+                width: 50%;
+            }
+        }
+        span {
+            padding-left: 6px;
+        }
+        .first {
+            @media screen and (min-width: @min-sp) {
+                width: 27%;
+                border-right: 1px dotted #c9c9c9;
+            }
+            & > div {
+                height: 68px;
+        text-align:center;
+        //大屏下居中
+        @media screen and (min-width: @min-sp){
+           line-height: 68px;
+        }
+                @media screen and (max-width: @max-sp) {
+                height: 42px;
+                border-bottom: 1px dashed #c9c9c9;
+            }
+        }
+      .num-owner{
+        .special-font(1.143em, #231f20);
+      }
+      i{
+          cursor: pointer;
+          font-size: 20px;
+      }
+      .dropdown-menu{
+          left: 50%;
+          top:80%;
+          margin-left: -100px;
+          &>li>a{
+              & span:first-child{
+                  padding-left:0;
+              }
+          }
+      }
+            .mobile-num {
+                .special-font(1.143em, #709302);
+            }
+        }
+        .middle {
+            @media screen and (min-width: @min-sp) {
+                width: 46%;
+            }
+            @media screen and (max-width: @max-sp) {
+                margin-top: 8px;
+            }
+            & > div {
+                height: 34px;
+                & > span {
+                    float: left;
+                    @media screen and (max-width: @max-sp) {
+                        width: 50%;
+                    }
+                }
+            }
+            label {
+                width: 178px;
+                @media screen and (max-width: @max-sp) {
+                    width: 50%;
+                }
+            }
+        }
+        .last {
+            @media screen and (min-width: @min-sp) {
+                width: 27%;
+                border-left: 1px dotted #c9c9c9;
+            }
+            & > div {
+                height: 34px;
+                & > span {
+                    float: left;
+                    position:relative;
+                    @media screen and (max-width: @max-sp) {
+                        width: 50%;
+                    }
+                }
+            }
+            i{
+                position:absolute;
+                left: 3em;
+                top: -2px;
+                cursor: pointer;
+                font-size: 20px;
+                color: #709302;
+                font-weight:normal;
+            }
+        }
+    }
+}
+
+// ===========================================================================
+//  网站底部的样式
+// ===========================================================================
+
+.webpage-footer {
+    width: 100%;
+    height: auto;
+    padding-bottom: 44px;
+    padding-top: 60px;
+    line-height: 1.8;
+    font-size: 12px;
+    text-align: center;
+    color: @mainColor;
+    background: url(../../image/login-footer-logo.png) no-repeat center bottom 20px;
+    @media (max-width: @max-sm) {
+        font-size: 14px;
+    }
+    &.content-footer {
+        color: #555;
+        background: url(../../image/footer-logo.png) no-repeat center bottom 20px;
+        background-color: #f0f0f0;
+    }
+}

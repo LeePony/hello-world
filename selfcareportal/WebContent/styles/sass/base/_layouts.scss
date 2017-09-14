@@ -1,0 +1,37 @@
+@charset "UTF-8";
+// ===========================================================================
+//  网站所有布局（宽高）的配置参数
+//  在命名方面可以使用缩写，并且一定要写描述
+//  必要时，附加图片说明
+// ===========================================================================
+
+$base-font-size: 14px;
+
+// PC宽度
+$page-width: 1200px;
+
+// 页面最大最小宽度
+$page-min-width: 600px;
+$page-max-width: 1680px;
+
+// 页面顶部和底部的布局
+$page-header-height: 98px;
+$page-footer-height: 36px;
+
+// 登录页面顶部和底部布局
+$login-header-height: 102px;
+$login-footer-height: 120px;
+
+// 内容区域和顶部/底部区域的间距
+$content-padding-top: 0;
+$content-padding-bottom: 0;
+
+//主内容区域外层内边框
+$main-padding:15px;
+//主内容区域组件的下外边框大小
+$main-magrin-bottom:20px;
+//主内容区域组件的内边框统一设置
+$main-padding-common:20px;
+
+// 页面左侧边栏的布局
+$aside-width: 330px;

@@ -1,0 +1,173 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="querylist-group">
+            <div class="querylist Balance" hidden id="balanceDiv">
+                <span class="querylist-text">{{SC_BALANCE}}</span>
+                <span class="querylist-number" id='defBal'></span>
+                <button class="querylist-btn" id='topUpBtn'>{{SC_TOP_UP}}</button>
+            </div>
+            <div class="querylist Fee" hidden id='postpaidDiv'>
+                <span class="querylist-text">{{SC_REAL_TIME_USAGE}}</span>
+                <span class="querylist-number" id='totalUsage'></span>
+                <button class="querylist-btn" id='detailBtn'>{{SC_DETAIL}}</button>
+            </div>
+            <div class="querylist Fee" hidden id='prepaidDiv'>
+                <span class="querylist-text">{{SC_LAST_TOP_UP}}</span>
+                <span class="querylist-number" id='charge'></span>
+             
+            </div>
+<!--             <div class="querylist Points"> -->
+<!--                 <span class="querylist-text">{{SC_POINTS}}</span> -->
+<!--                 <span class="querylist-number" id='points'></span> -->
+<!--             </div> -->
+<!--             <div class="overview-img"> -->
+              
+<!--                 <img src="../../../images/overview1.jpg"> -->
+<!--             </div> -->
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">{{SC_REAL_TIME_USAGE}}</h3>
+            </div>
+            <div class="box-body">
+                <div class="usage">{{SC_USAGE_TOTAL}}</div>
+                <div class="billing-cycle-box">
+                    <div class="billing-cycle">
+                        <div id="billingCycle" style="height:200px"></div>
+                    </div>
+                    <div class="billing-cycle-info">
+                        <div class="cycle-introduction">
+                            <div class="cycle-head" id='monthDiv'></div>
+                            <div class="cycle-content">
+                                <ul>
+<!--                                     <li> -->
+<!--                                         <div class="one-mark"> -->
+<!--                                         </div> -->
+<!--                                         <div class="cycle-content-title"> -->
+<!--                                             {{SC_MONTHLY_CHARGE}} -->
+<!--                                         </div> -->
+<!--                                         <div class="cycle-content-unit"> -->
+<!--                                             <span class="one-num" id='recurringChargeSpan'></span> -->
+<!--                                         </div> -->
+<!--                                     </li> -->
+                                    <li>
+                                        <div class="tow-mark">
+                                        </div>
+                                        <div class="cycle-content-title">
+                                            {{SC_ONETIME_CHARGE}}
+                                        </div>
+                                        <div class="cycle-content-unit">
+                                            <span class="tow-num" id='onetimeChargeSpan'> </span>
+                                            
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cycle-foot">
+                                <div class="cycle-foot-unit">
+                                    {{SC_TOTAL}}
+                                    <span class="foot-num" id='totalSpan'>76</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xs-12 col-sm-4">
+                        <div class="cycle-type"> Voice</div>
+                        <div class="cycle-process min">
+                        </div>
+                        <div class="cycle-billing">
+                            <span class="billing-number">60</span>
+                            <span class="billing-unit">min</span>
+                            <span>Remaining</span>
+                        </div>
+                        <div class="cycle-total"><span>Total:200min</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cycle-type"> Internet</div>
+                        <div class="cycle-process gb">
+                        </div>
+                        <div class="cycle-billing">
+                            <span class="billing-number">1.3</span>
+                            <span class="billing-unit">GB</span>
+                            <span>Remaining</span>
+                        </div>
+                        <div class="cycle-total"><span>Total:2.5GB</span></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="cycle-type"> Internet</div>
+                        <div class="cycle-process txt">
+                        </div>
+                        <div class="cycle-billing">
+                            <span class="billing-number">100</span>
+                            <span class="billing-unit">TXT</span>
+                            <span>Remaining</span>
+                        </div>
+                        <div class="cycle-total"><span>Total:200TXT</span></div>
+                    </div> -->
+                </div>
+                <div class="usage">{{SC_USAGE_DETAIL}}</div>
+                <div class="row">
+                   <div class="col-xs-12 col-sm-12">
+                        <div class="package-detail">
+                            <div class="haveioc-title">
+                                <img src="images/data-package.png" alt="Data Package Nam">
+                                <span>{{SC_DATA_PACKAGE}}</span>
+                            </div>
+                           
+                            <div id='dataPackage'>
+                                
+                            </div>
+                            <div id='totalData'></div>
+                        </div>
+                   </div>
+                </div>
+                <div class="row" hidden="true">
+                   <div class="col-xs-12 col-sm-12">
+                        <div class="package-detail">
+                            <div class="haveioc-title">
+                                <img src="images/voice-package.png" alt="Data Package Nam">
+                                <span>{{SC_VOICE_PACKAGE}}</span>
+                            </div>
+                            <div id='voicepackage'>
+                              
+                            </div>
+                            <div id='totalVoice'></div>
+                        </div>
+                   </div>
+                </div>
+                <div class="row" hidden="true">
+                   <div class="col-xs-12 col-sm-12">
+                        <div class="package-detail">
+                            <div class="haveioc-title">
+                                <img src="images/SMS-package.png" alt="Data Package Nam">
+                                <span>{{SC_SMS_PACKAGE}}</span>
+                            </div>
+                            <div id='smspackage'>
+                              
+                            </div>
+                            <div id='totalSms'></div>
+                        </div>
+                   </div>
+                </div>
+                <div class="row">
+                   <div class="col-xs-12 col-sm-12">
+                        <div class="package-detail">
+                            <div class="haveioc-title">
+                                <img src="images/SMS-package.png" alt="Data Package Nam">
+                                <span>{{SC_OTHER_PACKAGE}}</span>
+                            </div>
+                            <div id='otherpackage'>
+                              
+                            </div>
+                            <div id='totalOther'></div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

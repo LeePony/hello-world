@@ -1,0 +1,17 @@
+<div class="package-info">
+	<div class="info-list">
+		<label>Total<span>:</span>
+		</label><span id="total"></span>
+	</div>
+	<div class="info-list">
+		<label>Remaining<span>:</span>
+		</label ><span id='remain'></span>
+	</div>
+	<div class="info-list">
+		<label>Used<span>:</span>
+		</label><span id='used'></span>
+	</div>
+	<div class="arrow-left arrow-blttom">
+		<span></span>
+	</div>
+</div>

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+// ===========================================================================
+//  account
+// ===========================================================================
+.point-group {
+    .querylist {
+        margin-right: 1%;
+        margin-bottom: 0;
+        border: 0;
+        float: left;
+        width: 24.25%;
+        padding: 2px 0;
+        & .querylist-iocn {
+            width: 28%;
+            @media screen and (max-width: $breakpoint-large) {
+                display: none;
+            }
+        }
+        & .querylist-content {
+            width: 72%;
+            padding: 18px 10% 4px 0;
+            @media screen and (max-width: $breakpoint-large) {
+                width: 100%;
+                padding-left: 16px;
+            }
+        }
+        .querylist-text {
+            text-align: left;
+            color: C("white");
+        }
+        .querylist-number {
+            text-align: left;
+            color: C("white");
+            a {
+                font-size: $base-font-size;
+                color: C("white");
+                text-decoration: underline;
+            }
+        }
+        .querylist-iocn {
+            padding-top: 8px;
+            a {
+                font-size: $base-font-size;
+                color: C("white");
+                text-decoration: underline;
+            }
+        }
+    }
+    .total-usage {
+        background-color: C("lightblue");
+    }
+    .remaining-balance {
+        background-color: C("lightgreen");
+    }
+    .last-top-up {
+        background-color: C("lightred");
+    }
+    .point {
+        background-color: #736086;
+        margin-right: 0;
+    }
+}
+.point-info {
+    margin-bottom: 20px;
+}

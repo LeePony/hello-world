@@ -1,0 +1,82 @@
+<div class="box">
+    <div class="box-header">
+        <h3 class="box-title"><i class="iconfont icon-jiantou1 js-back"></i>Add User</h3>
+    </div>
+    <div class="box-con">
+        <form class="form-horizontal" id="Form">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">User Rights</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="UserRights" class="form-control" id="UserRights">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-4 control-label">User Name</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="UserName" class="form-control" placeholder="Please Enter">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">User ID</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="UserID" class="form-control" placeholder="Please Enter">
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-4 control-label">Email</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="Email" class="form-control" placeholder="Please Enter">
+                        </div>
+                    </div>
+                    <div class="form-group required js-pwd">
+                        <label class="col-sm-4 control-label">Password</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="Password" class="form-control" placeholder="Please Enter">
+                        </div>
+                    </div>
+                    <div class="form-group required js-pwd">
+                        <label class="col-sm-4 control-label">Confirm Password</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="ConfirmPassword" class="form-control" placeholder="Please Enter">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Manager Name</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="ManagerName" class="form-control" placeholder="Please Enter">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">MSISDN</label>
+                        <div class="col-sm-5">
+                            <div class="input-group">
+                                <input type="text" name="MSISDN" class="form-control">
+                                <span class="input-group-addon js-new-win"><i class="glyphicon glyphicon-new-window"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group required">
+                        <label class="col-sm-4 control-label">Department</label>
+                        <div class="col-sm-5">
+                            <input type="text" name="Department" class="form-control" id="Department">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col-sm-5 col-sm-offset-4">
+                <div class="btn-toolbar edit-btn">
+                    <button type="button" class="btn btn-primary js-submit">Submit</button>
+                    <button type="button" class="btn btn-default">Cancel</button>
+                </div>
+                <div class="btn-toolbar detail-btn" style="display:none;">
+                    <button type="button" class="btn btn-primary btn-min-width js-edit">Edit</button>
+                    <button type="button" class="btn btn-default">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

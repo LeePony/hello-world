@@ -1,0 +1,133 @@
+<div class="row">
+	<div class="col-xs-12 ">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_MY_BILLING_TITLE}}</h3>
+			</div>
+			<div class="box-body">
+				<div class="description">
+					<div >
+						<i class="iconfont icon-tishi"></i>
+					</div>
+					<ul>
+						<li><span> * </span>{{SC_HISTORY_HINT1}}</li>
+						<li><span> * </span>{{SC_HISTORY_HINT2}}</li>
+						<li><span> * </span>{{SC_TOP_UP_HIS_COMMENTS2}}</li>
+						<li><span> * </span>{{SC_TAX_INCLUDE}}</li>
+					</ul>
+				</div>
+
+			<div class ="row form-horizontal">
+
+			<label class="col-sx-12 col-sm-3 control-label">{{SC_ACCOUNT_NO}}</label>
+			<div class="col-sx-12 col-sm-4">
+
+				<input type="text" id='selAccount' class="form-control" />
+			</div>
+			</div>
+			<div class="row">
+
+				<div class="col-xs-12 col-xs-12 col-sm-12 btn-list" id='MonthButton'>
+					
+				</div>
+			</div>
+			<div class="row" ID='billDiv' hidden>
+				<div class="col-xs-12 col-xs-12 col-sm-12">
+					<form class="form">
+						<div class="bills-box">
+							<div class="col-xs-12 col-sm-5 bills-info-left">
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label>{{SC_CUSTOMER_NAME}}</label> <input type="text"
+										class="form-control form-control-static control" readonly
+										id='custName'>
+								</div>
+								<div class="col-xs-6 col-sm-6 list-group" hidden>
+									<label>{{SC_MOBILE_NUMBER}}</label> <input type="text"
+										class="form-control form-control-static control" readonly
+										value="">
+								</div>
+								<div class="col-xs-6 col-sm-6 list-group">
+									<label>{{SC_ACCOUNT_NO}}</label> <input type="text"
+										class="form-control form-control-static control" readonly
+										id='acctCode'>
+								</div>
+								<div class="col-xs-6 col-sm-6 list-group">
+									<label>{{SC_BILL_MONTH}}</label> <input type="text"
+										class="form-control form-control-static control" readonly
+										id="billMonth">
+								</div>
+								<div class="col-xs-6 col-sm-6 list-group">
+									<label>{{SC_BILL_NO}}</label> <input type="text"
+										class="form-control form-control-static control" readonly
+										id="billNo">
+								</div>
+								<div class="col-xs-12 col-sm-12 list-group" hidden>
+									<label>{{SC_PAYMENT_PERIOD}}</label> <input type="text"
+										class="form-control form-control-static control" readonly
+										id="paymentPeriod">
+								</div>
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label>{{SC_BILL_AMOUNT}}</label> <input type="text"
+										class="form-control form-control-static control amount-value"
+										readonly id="Amount">
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-7 bills-info-right">
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label class="col-xs-8 col-sm-8 control-label"></label>
+									<div class="col-xs-4 col-sm-4">
+										<input type="text"
+											class="form-control form-control-static control strong"
+											readonly value="KYATS">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label class="col-xs-8 col-sm-8 control-label">{{SC_ADVANCE_PAYMENT}}</label>
+									<div class="col-xs-4 col-sm-4">
+										<input type="text" id='Advance'
+											class="form-control form-control-static control " readonly
+											value="">
+									</div>
+								</div>
+								<div id='acctItemDiv'></div>
+								<div class="col-xs-12 col-sm-12 list-group yellow">
+									<label class="col-xs-8 col-sm-8 control-label">{{SC_CURRENT_TOTAL}}</label>
+									<div class="col-xs-4 col-sm-4">
+										<input type="text" id='Total'
+											class="form-control form-control-static control" readonly
+											value="">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label class="col-xs-8 col-sm-8 control-label">{{SC_ADJUSTMENT}}</label>
+									<div class="col-xs-4 col-sm-4">
+										<input type="text" id='Adjustment'
+											class="form-control form-control-static control" readonly
+											value="">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label class="col-xs-8 col-sm-8 control-label">{{SC_OPEN_BALANCE}}</label>
+									<div class="col-xs-4 col-sm-4">
+										<input type="text" id='Opening'
+											class="form-control form-control-static control" readonly
+											value="">
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-12 list-group">
+									<label class="col-xs-8 col-sm-8 control-label">{{SC_CLOSE_BALANCE}}</label>
+									<div class="col-xs-4 col-sm-4">
+										<input type="text" id='Closing'
+											class="form-control form-control-static control" readonly
+											value="">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

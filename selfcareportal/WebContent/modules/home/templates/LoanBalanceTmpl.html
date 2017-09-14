@@ -1,0 +1,134 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_LOAN_BALANCE}}</h3>
+			</div>
+			<div class="box-con">
+				<section class="page-section">
+					<div id="tabs" class="ui-tabs">
+						<ul class="tabs-nav-list">
+							<li><a href="#tabs-a">{{SC_LOAN_TAB}}</a></li>
+							<li><a href="#tabs-b" id="hisTab" >{{SC_HISTORY_TAB}}</a></li>
+						</ul>
+						<div id="tabs-a" class="ui-tabs-panel">
+							<div class="description">
+								<div>
+									<i class="iconfont icon-tishi"></i>
+								</div>
+								<ul>
+									<li><span> * </span>{{SC_LOAN_MSG_1}}</li>
+									<li><span> * </span>{{SC_LOAN_MSG_2}}</li>
+									<li><span> * </span>{{SC_LOAN_MSG_3}}</li>
+								</ul>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<form class="form form-horizontal" id="loanBalanceForm">
+									<div class="form-group">
+										<label class="col-sm-4 control-label">{{SC_MOBILE_NUMBER}}</label>
+										<div class="col-sm-4 input-group">
+											<input type="text" class="form-control form-control-static"
+												id="mobileNumber" readonly value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-4 control-label">{{SC_MY_BALANCE}}</label>
+										<div class="col-sm-4 input-group">
+											<input type="text"
+												class="form-control form-control-static lost-active"
+												id="myBalanceId" readonly value="" />
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-4 control-label">{{SC_LOAN_AMOUNT}}</label>
+										<div id="chargeBtnDiv" class="col-sm-8 input-group"></div>
+									</div>
+
+									<div class="form-group" hidden="true">
+										<label class="col-sm-4 control-label">{{SC_SERVICE_CHARGE}}</label>
+										<div class="col-sm-4 input-group">
+											<input type="text" hidden="true"
+												class="form-control form-control-static num static-inline"
+												readonly value="$0.03" style="width: 100px;"><span
+												class="other-info">(x%)</span>
+										</div>
+									</div>
+									<div class="form-group form-button">
+										<div class="col-sm-offset-4 col-sm-4 input-group">
+											<button type="button" id="loanBalBtn" class="btn btn-primary">{{SC_SUBMIT_LOAN}}</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div id="tabs-b" class="ui-tabs-panel">
+							<div class="description">
+								<div>
+									<i class="iconfont icon-tishi"></i>
+								</div>
+								<ul>
+									<li><span> * </span>{{SC_HISTORY_MSG_1}}</li>
+									<li><span> * </span>{{SC_HISTORY_MSG_2}}</li>
+									<li><span> * </span>{{SC_HISTORY_MSG_3}}</li>
+									<li><span> * </span>{{SC_LOAN_MSG_4}}</li>
+									<li><span> * </span>{{SC_LOAN_MSG_5}}</li>
+								</ul>
+							</div>
+							<div class="row history-date-list">
+								<div class="col-xs-12 col-sm-12 col-md-12">
+									<button type="button" id="nearlyThreeBtn"
+										class="btn btn-date">{{SC_NEARLY_THREE_MONTHS}}</button>
+									<button type="button" id="nearlySixBtn" class="btn btn-date">{{SC_NEARLY_SIX_MONTHS}}</button>
+									<button type="button" id="customTime"
+										class="btn btn-date clearfix">{{SC_CUST_SELECT_TIME}}</button>
+									<div class="custom-time">
+										<div class="col-xs-12 col-sm-5 no-padding">
+											<div class="input-group">
+												<input type="text" id="startDate" class="form-control">
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-5 no-padding">
+											<div class="input-group">
+												<input type="text" id="endDate" class="form-control">
+											</div>
+										</div>
+										<button type="button" class="search" id="searchBtn">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="table-box">
+								<div id="loanBalanceHisGrid"></div>
+							</div>
+							<div class="row" hidden="true">
+								<div class="col-xs-12 col-sm-12 history-info">
+									<form class="form">
+										<div class="history-info-left">
+											<div class="list-group"></div>
+											<div class="list-group"></div>
+										</div>
+										<div class="history-info-right">
+											<div class="list-group">
+												<label class="control-label">Total Amount :</label> <input
+													id="totalAmount" type="text"
+													class="form-control form-control-static num" readonly=""
+													value="">
+											</div>
+											<div class="list-group">
+												<label class="control-label">Total Record :</label> <input
+													id="records" type="text"
+													class="form-control form-control-static num" readonly=""
+													value="">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

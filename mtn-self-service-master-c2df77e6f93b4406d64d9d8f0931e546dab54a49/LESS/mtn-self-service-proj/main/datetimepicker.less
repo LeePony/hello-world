@@ -1,0 +1,44 @@
+@charset "UTF-8";
+// ===========================================================================
+//  datetimepicker 时间控件
+// ===========================================================================
+//修复样式覆盖问题
+.datetimepicker .btn{
+    float: none;
+    display: inline-block;
+    margin: 0;
+    padding: 6px 12px;
+    min-width: 0px;
+}
+//按钮展出关闭按钮
+.custom-time{
+    .form-control-feedback{
+        height: 38px;
+        line-height: 38px;
+    }
+}
+.datetimepicker {
+    table {
+        tr {
+            td {
+                &.today,
+                &.today:hover,
+                &.today.disabled,
+                &.today.disabled:hover {
+                    background: @accentColor;
+                }
+                &.day:hover,
+                &.day.focused {
+                    background: lighten(@accentColor, 10%);
+                }
+                &.active,
+                &.active:hover,
+                &.active.disabled,
+                &.active.disabled:hover {
+                    background: @accentColor;
+                    color: @textColor;
+                }
+            }
+        }
+    }
+}

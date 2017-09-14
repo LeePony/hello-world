@@ -1,0 +1,145 @@
+@charset "UTF-8";
+// ===========================================================================
+//  自定义按钮的样式
+// ===========================================================================
+
+.btn {
+    // float: left;
+    padding: 5px 12px;
+    border-radius: 4px;
+    border:1px solid transparent;
+    min-width: 70px;
+    font-family: @font;
+    transition:color .05s,background-color .25s;
+    .btn-min-width {
+        min-width: 75px;
+    }
+}
+.transfer-amount {
+    .btn {
+        padding: 5px 16px;
+    }
+}
+.btn-list {
+    .clearfix;
+    margin-bottom: 18px;
+    @media screen and (min-width: @min-lg) {
+        .btn {
+            margin-right: 12px;
+        }
+    }
+    .btn-default:hover {
+        .special-font(@base-font-size, @mainColor);
+        background-color: #609841;
+        border: 1px solid transparent;
+    }
+}
+.btn-date {
+    min-width: 60px;
+    color: @textColor;
+    border: 1px solid #dcdbdb;
+    background-color: @defaultBg;
+    font-size: @base-font-size+1;
+    padding: 6px 20px;
+    p {
+        color: @fontColor;
+    }
+    &:hover, &.current {
+        color: @accentColor;
+        border-color: @menuColor;
+        background: url(../../image/rb-jiao.png) no-repeat right bottom;
+        p {
+            color: @accentColor;
+        }
+    }
+}
+.btn-get-code {
+    position: absolute;
+    right: -2px;
+    z-index: 9;
+    margin: 0;
+    padding: 6px 16px;
+    background-color: #fff;
+    border: 1px solid #dbdada;
+    .special-font(@base-font-size, #2460a8);
+}
+.btn-default {
+    // .special-font(@base-font-size, #666);
+    border: 1px solid @borderColor;
+    color: @textColor;
+}
+.btn-primary {
+    // .special-font(@base-font-size, @textColor);
+    background-color: @mainBg;
+    border-color:@menuColor;
+    color: @textColor;
+    &:hover,&:focus,&:active,&:active:hover{
+        background-color: lighten(@mainBg, 10%);
+        border-color:lighten(@menuColor, 10%);
+        color: @textColor;
+    }
+}
+.btn-outline-default {
+    background: none;
+    border: 1px solid @borderColor;
+    color: @textColor;
+    &:hover,&:focus,&:active,&:active:hover{
+        border-color:lighten(@menuColor, 10%);
+        color: lighten(@menuColor, 10%);
+    }
+}
+.btn-outline-primary {
+    background: none;
+    border-color:@menuColor;
+    color: @menuColor;
+    &:hover,&:focus,&:active,&:active:hover{
+        background: none;
+        border-color:lighten(@menuColor, 10%);
+        color: lighten(@menuColor, 10%);
+    }
+}
+.button-info {
+    padding-top: 8px;
+    color: #666;
+}
+.s-btn {
+    min-width: 70px;
+    padding: 4px 6px;
+    color: @mainColor;
+    font-size: @base-font-size - 1;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+.untreated {
+    background-color: #ff9600;
+}
+.processed {
+    color: @mainColor;
+    background-color: #2eab8c;
+}
+.btn-toolbar {
+    margin-left: -8px;
+    > .btn,
+    > .btn-group, 
+    > .input-group {
+        margin-left: 8px;
+        margin-bottom: 14px;
+        p {
+            margin: 0;
+        }
+    }
+    &.btn-num {
+        > .btn {
+            width: 132px;
+        }
+    }
+}
+.input-group-addon {
+    background-color: transparent;
+    border-color: @borderColor;
+}

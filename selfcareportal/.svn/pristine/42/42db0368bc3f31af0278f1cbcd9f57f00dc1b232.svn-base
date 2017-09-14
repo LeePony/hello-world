@@ -1,0 +1,173 @@
+@charset "UTF-8";
+// ===========================================================================
+//  history
+// ===========================================================================
+.history-date-list {
+    margin-bottom: 20px;
+    padding: 0 34px;
+    label {
+        padding-bottom: 5px;
+    }
+    @media (min-width: 767px) {
+        label {
+            text-align: right;
+            padding: 7px 0 0;
+        }
+    }
+}
+@media (max-width: 767px) {
+    #customTime,
+    #otherTime,
+    .custom-time {
+        display: none !important;
+    }
+}
+.contact-history-list {
+    margin-bottom: 15px;
+    label {
+        padding-bottom: 5px;
+    }
+    @media (min-width: 767px) {
+        label {
+            text-align: right;
+            padding: 7px 0 0;
+        }
+    }
+}
+.history-info {
+    margin-bottom: 20px;
+    .list-group {
+        margin-bottom: 0;
+        @include clearfix;
+        color: C("lightgray");
+        .form-control {
+            float: left;
+            width: 48%;
+            @media (max-width: 480px) {
+                width: 100%;
+                padding-left: 40px;
+                margin-bottom: 6px;
+            }
+        }
+        @media (max-width: 767px) {
+            &.v-hidden {
+                display: none;
+            }
+        }
+    }
+    .history-info-left,
+    .history-info-right {
+        float: left;
+        width: 50%;
+        .control-label {
+            float: left;
+            width: 50%;
+            margin-right: 2%;
+            text-align: right;
+            padding-top: 6px;
+        }
+    }
+    @media (max-width: 767px) {
+        .history-info-left,
+        .history-info-right {
+            width: 100%;
+        }
+    }
+    @media (max-width: 480px) {
+        .history-info-left,
+        .history-info-right {
+            .control-label {
+                width: 100%;
+                text-align: left;
+                padding-left: 40px;
+                margin-bottom: 0;
+            }
+        }
+    }
+    @at-root .control-static {
+        color: C("default");
+    }
+}
+.search {
+    height: 37px;
+    padding: 3px 12px;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: $base-font-size;
+    background-color: C("blue");
+    color: C("white");
+}
+.custom-time {
+    margin-bottom: 10px;
+    display: none;
+    .input-group {
+        margin-right: 5px;
+    }
+    .form-control {
+        height: 38px;
+    }
+    @media (max-width: 767px) {
+        margin-left: 0;
+        & > div {
+            margin-bottom: 10px;
+        }
+    }
+}
+.other-amount {
+  display: none;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 8px;
+}
+/* Balance Transfer - Receiver Number */
+.form-horizontal .transfer .form-help i.active{
+    color: #ffcb06;
+}
+.transfer {
+    .history-num-list {
+        display: none;
+        position: absolute;
+        right: -28px;
+        top: 35px;
+        width: 100%;
+        background-color: #fbe19c;
+        z-index: 9;
+        padding-top: 12px;
+        padding-left: 30px;
+        padding-bottom: 5px;
+        border-radius: 4px;
+        .btn-date {
+            background-color: #fff;
+            color: #f79e02;
+            border:1px solid #fff;
+            border-radius: 4px;
+            &:hover, &.current {
+                border:1px solid C("blue");
+            }
+        }
+        .arrow-top {
+            position: absolute;
+            right: 5px;
+            top: -5px;
+            width: 0;
+            height: 0;
+            border-width: 0 6px 6px 6px;
+            border-style: solid;
+            border-color: transparent transparent #fbe19c transparent ;
+        }
+    }
+}
+.datetimepicker tfoot a.btn {
+    background: #024ea2;
+    color: #fff;
+    padding: 1px 5px;
+    margin-left: 8px;
+}

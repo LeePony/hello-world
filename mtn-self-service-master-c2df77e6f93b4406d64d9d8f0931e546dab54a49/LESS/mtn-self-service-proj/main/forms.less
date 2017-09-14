@@ -1,0 +1,280 @@
+@charset "UTF-8";
+// ===========================================================================
+// Horizontal forms are built on grid classes and allow you to create forms with
+// labels on the left and inputs on the right.
+// ===========================================================================
+
+.form-horizontal {
+    .first-code + .form-control {
+        padding-left: 40px;
+    }
+    .clearfix;
+    .radio-list{
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 7px;
+    }
+    .radio,
+    .checkbox,
+    .radio-inline,
+    .checkbox-inline {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .control-label {
+        padding-right: 20px;
+        font-weight: normal;
+        color: @fontColor;
+    }
+    .form-control {
+        height: 33px;
+        color: #000;
+        transition: none;
+        box-shadow: none;
+        border-color: @borderColor;
+        &:focus {
+            box-shadow: none;
+            border: 1px solid @borderColor;
+            border-bottom: 2px solid #ffbf05;
+        }
+    }
+    textarea.form-control {
+        height: 115px;
+    }
+    .form-group {
+        margin-bottom: 8px;
+        // .btn-toolbar {
+        //     margin-top: 20px;
+        // }
+        // .glyphicon-new-window {
+        //     position: absolute;
+        //     right: 10px;
+        //     top: 8px;
+        // }
+        .form-control-feedback {
+            width: 39px;
+            height: 33px;
+            line-height: 33px;
+        }
+    }
+    + .ui-jqgrid {
+        margin-top: 8px;
+    }
+    + .sub-box-header {
+        margin-top: 20px;
+    }
+}
+.has-error .form-control {
+    box-shadow: none;
+    border: 1px solid @borderColor;
+    border-bottom: 2px solid #c90000;
+    &:focus {
+        border: 1px solid @borderColor;
+        border-bottom: 2px solid #c90000;
+        box-shadow: none;
+    }
+}
+.form-detail .form-group {
+    margin-bottom: 0;
+}
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control{
+    padding-left: 0;
+    background: #fff;
+    border-color: transparent;
+    box-shadow: none;
+    &:focus {
+        border-color: transparent;
+    }
+}
+.form-control[disabled] ~ .input-group-addon {
+    display: none;
+    border: 0;
+    background-color: transparent;
+}
+//输入框横向排列，用于开始时间和结束时间
+.input-group .input-line-group{
+    display: table-cell;
+    padding-right: 10px;
+    @media (max-width: @max-sm){
+        display: inline-block;
+    }
+}
+.form {
+    .form-group {
+        margin-bottom: 10px;
+        @media (max-width: @max-sm) {
+            margin-bottom: 16px;
+        }
+        .clearfix;
+        &.form-button {
+            margin-top: 44px;
+        }
+    }
+    .control-label {
+        display: inline-block;
+        max-width: 100%;
+        margin-bottom: 5px;
+        color: #666;
+        font-weight:normal;
+        font-size: @base-font-size + 1;
+        @media (max-width: 767px) {
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .form-control{
+        display: block;
+        width: 100%;
+        height: 34px;
+        padding: 6px 8px;
+        font-weight:normal;
+        font-size: @base-font-size+1;
+        color: #232323;
+        font-family:@font;
+    }
+    textarea.form-control {
+        height: auto;
+    }
+    .form-control-static {
+        border: none;
+        padding-left: 0;
+        background-color: transparent;
+        box-shadow: none;
+        @media (max-width: 768px) {
+            height: auto;
+            padding: 2px 0;
+        }
+    }
+    .form-static-primary {
+        .special-font(@base-font-size + 1, @accentColor);
+    }
+    .lost-active {
+        .special-font(@base-font-size + 1, @accentColor);
+    }
+    .num-active {
+        .special-font(@base-font-size + 1, @accentColor);
+    }
+    .num {
+        .special-font(@base-font-size + 1, @accentColor);
+    }
+    .static-inline {
+        display: inline-block;
+        & + a{
+            text-decoration:underline;
+            .special-font(@base-font-size + 1, @accentColor);
+            line-height: 2.2;
+        }
+    }
+    & .form-help-box {
+        position: relative;
+        & .form-help{
+            display: block;
+            position: absolute;
+            top: 6px;
+            right: -36px;
+            z-index: 9;
+            cursor:pointer;
+            color: #666;
+            font-size: 15px;
+        }
+    }
+    .other-info {
+        color: #666;
+        line-height: 34px;
+    }
+    .form-after-unit{
+        float: left;
+        line-height: 1.9;
+        .special-font(18px, #555);
+    }
+}
+@media (max-width: @max-sm) {
+    .form-account .row {
+        margin-bottom: 15px;
+    }
+}
+.input-group[class*="col-"] {
+    padding-left: 4px;
+    @media (max-width: @max-sm) {
+        padding-left: 0;
+    }
+}
+//带查询按钮的横向表单
+.query-form {
+    .form-group {
+        & > label[class*=col-], & >div[class*=col-]{
+            margin-bottom: 10px;
+            padding-left:0;
+        }
+    }
+    .form-control{
+        height: 38px;
+    }
+}
+//单选竖排
+.radio-list{
+    height: 34px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    vertical-align: middle;
+    font-weight: normal;
+    cursor: pointer;
+    input[type="radio"]{
+        width: 17px;
+        height: 17px;
+        margin-top: 2px;
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 4px \9;
+    }
+}
+//设置textarea 无法拖动改变大小
+textarea{
+    resize: none;
+}
+//textarea的字数提示
+.textarea-limit{
+    font-size: 14px;
+    color: @fontColor;
+}
+//输入框选中样式
+.form-control{
+    transition:border-color ease-in-out .15s;
+    &:focus{
+        border-color: @menuColor;
+        outline: 0;
+        box-shadow:none;
+    }
+}
+.partial-VC-PIN {
+    .form-control {
+        width: 30px;
+        margin-right: 4px;
+        margin-bottom: 4px;
+    }
+}
+.first-code {
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 39px;
+    height: 39px;
+    line-height: 39px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-right: 1px solid #dbdada;
+}
+.code-img {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border-left: 1px solid #ddd;
+    z-index: 3;
+}

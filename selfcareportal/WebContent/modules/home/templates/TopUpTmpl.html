@@ -1,0 +1,115 @@
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title">{{SC_TOP_UP}}</h3>
+			</div>
+			<div class="box-con">
+				<section class="page-section">
+					<div id="tabs" class="ui-tabs">
+						<ul class="tabs-nav-list">
+                            <li>
+                                <a href="#tabs-a">{{SC_TOP_UP}}</a>
+                            </li>
+                            <li>
+                                <a id="hisTab" href="#tabs-b">{{SC_HISTORY}}</a>
+                            </li>
+                        </ul>
+                        <div id="tabs-a" class="ui-tabs-panel">
+                        	<div class="description">
+								<div><i class="iconfont icon-tishi"></i></div>
+								<ul>
+									<li><span> * </span>{{SC_TOP_UP_COMMENTS}}</li>
+								</ul>
+							</div>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<form id="rechargeForm" class="form form-horizontal">
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-4 control-label">{{SC_MOBILE_NUMBER}}</label>
+										<div class="col-xs-12 col-xs-12 col-sm-6 input-group">
+											<input type="text" class="form-control form-control-static accNbrLabel" readonly value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-4 control-label">{{SC_MY_BALANCE}}</label>
+										<div class="col-xs-12 col-xs-12 col-sm-6 input-group">
+										  	<input id="myBalanceId" type="text" class="form-control form-control-static lost-active" readonly value="">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-xs-12 col-sm-4 control-label">{{SC_VOUCHER_PIN}}</label>
+										<div class="col-xs-12 col-xs-12 col-sm-6 input-group">
+										  	<input id="vcCardId" type="text" class="form-control" placeholder="{{SC_HINT_ENTER_DIGIT_RECHARGE_PWD}}" data-rule="required; digits; length[18]">
+										</div>
+									</div>
+									<div class="form-group form-button">
+										<div class="col-xs-12 col-sm-offset-4 col-xs-12 col-sm-6 input-group">
+										  <button id="rechargeBtn" type="button" class="btn btn-primary">{{SC_RECHARGE}}</button>
+										</div>
+									</div>
+								</form>
+							</div>
+                        </div>
+                        <div id="tabs-b" class="ui-tabs-panel">
+                        	<div class="description">
+								<div><i class="iconfont icon-tishi"></i></div>
+								<ul>
+									<li><span> * </span>{{SC_TOP_UP_HIS_COMMENTS1}}</li>
+									<li><span> * </span>{{SC_TOP_UP_HIS_COMMENTS2}}</li>
+									<li><span> * </span>{{SC_TOP_UP_HIS_COMMENTS3}}</li>
+								</ul>
+							</div>
+							<div class="row history-date-list">
+								<div class="col-xs-12 col-sm-12 col-md-12">
+									<button type="button" id="threeMonth" class="btn btn-date">{{SC_NEARLY_THREE_MONTH}}</button>
+									<button type="button" id="sixMonth" class="btn btn-date">{{SC_NEARLY_SIX_MONTH}}</button>
+									<button type="button" id="customTime" class="btn btn-date clearfix">{{SC_CUST_TIME}}</button>
+									<form id="searchForm">
+									<div class="custom-time">
+		                                <div class="col-xs-12 col-sm-5 no-padding">
+		                                	<div class="input-group"><input type="text" id="startDate" class="form-control" data-rule="required;date;"></div>
+		                                </div>
+		                                <div class="col-xs-12 col-sm-5 no-padding">
+		                                	<div class="input-group"><input type="text" id="endDate" class="form-control" data-rule="required;match[gte, startDate, date];"></div>
+		                                </div>
+										<button id="customTimeSearch" type="button" class="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+									</div>
+									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 history-info">
+									<form class="form">
+										<div class="history-info-left">
+<!-- 											<div class="list-group"> -->
+<!-- 												<label class="control-label">{{SC_CUSTOMER_NAME}} :</label> -->
+<!-- 												<input id="custNameId" type="text" class="form-control form-control-static" readonly="" value=""> -->
+<!-- 											</div> -->
+											<div class="list-group">
+												<label class="control-label">{{SC_MOBILE_NUMBER}} :</label>
+												<input type="text" class="form-control form-control-static accNbrLabel" readonly="" value="">
+											</div>
+										</div>
+										<div class="history-info-right">
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_AMOUNT}} :</label>
+												<input id="totalAmount" type="text" class="form-control form-control-static num" readonly="" value="">
+											</div>
+											<div class="list-group">
+												<label class="control-label">{{SC_TOTAL_RECORD}} :</label>
+												<input id="records" type="text" class="form-control form-control-static num" readonly="" value="">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="table-box">
+								<div id="paymentHisGrid"></div>
+							</div>
+                        </div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

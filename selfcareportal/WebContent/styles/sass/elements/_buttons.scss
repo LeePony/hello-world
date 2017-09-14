@@ -1,0 +1,77 @@
+@charset "UTF-8";
+// ===========================================================================
+//  自定义按钮的样式
+// ===========================================================================
+
+.btn {
+    border-radius: 4px;
+}
+.transfer-amount .btn {
+    padding: 6px 16px;
+}
+.btn-list {
+    margin-bottom: 10px;
+    .btn-default {
+        margin-right: 4px;
+        margin-bottom: 10px;
+        &:hover {
+            @include special-font($base-font-size, C("white"));
+            background-color: C("blue");
+            border: 1px solid transparent;
+        }
+    }
+}
+.btn-date {
+    min-width: 68px;
+    color: #191919;
+    border: 1px solid #dcdbdb;
+    background-color: C("white");
+    border-radius: 0;
+    margin-right: 4px;
+    margin-bottom: 10px;
+    &:hover, &.current {
+        color: C("blue");
+        border-color: C("blue");
+        background: url(../../images/rb-jiao.png) no-repeat right bottom;
+    }
+}
+.btn-default {
+    @include special-font($base-font-size, #666);
+    background-color: C("hoverColor");
+    border: 1px solid C("borderColor");
+}
+.btn-primary {
+    @include special-font($base-font-size, C("white"));
+    background-color: C("blue");
+    &:hover,&:focus,&:active{
+        background-color: #02458f;
+    }
+}
+.btn-print {
+    margin-right: 4px;
+}
+.button-info {
+    padding-top: 8px;
+    color: #666;
+}
+.s-btn {
+    min-width: 70px;
+    padding: 4px 6px;
+    color: C("white");
+    font-size: $base-font-size - 1;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+.untreated {
+    background-color: #ff9600;
+}
+.processed {
+    color: C("white");
+    background-color: #2eab8c;
+}

@@ -1,0 +1,51 @@
+<div class="ui-dialog dialog-md">
+    <div class="modal-header">
+        <h4 class="modal-title">{{SC_ORDER_INFO}}</h4>
+    </div>
+    <div class="modal-body">
+        <form class="form form-horizontal">
+            <div class="form-group">
+                <label class="col-sm-5 control-label">{{SC_MOBILE_NUMBER}}</label>
+                <div class="col-sm-7 input-group">
+                    <input id="orderAccNbr" type="text" class="form-control form-control-static" readonly value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label">{{SC_OFFER}}</label>
+                <div class="col-sm-7 input-group">
+                    <input id="orderOfferName" type="text" class="form-control form-control-static" readonly value="">
+                </div>
+            </div>
+            <div class="form-group" id='chargeDiv' hidden>
+                <label class="col-sm-5 control-label">{{SC_CHARGE}}</label>
+                <div class="col-sm-7 input-group">
+                    <input id="orderCharge" type="text" class="form-control form-control-static cash" readonly value="">
+                </div>
+            </div>
+            <div class="form-group" id='balanceDiv' hidden>
+                <label class="col-sm-5 control-label">{{SC_YOUR_BALANCE}}</label>
+                <div class="col-sm-7 input-group">
+                    <input id="orderBal" type="text" class="form-control form-control-static free static-inline" readonly value="" style="width: 100px;"><a id="topUpLink" href="javascript:;" class="link form-control-static static-inline">{{SC_TOP_UP}}</a>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-5 control-label">{{SC_EFFECTIVE_TYPE}}</label>
+                <div class="col-sm-7 input-group">
+                <input id="effType" type="text" class="form-control form-control-static" readonly value="Instantly">
+                </div>
+            </div>
+            <div class="form-group" style="display:none">
+                <label class="col-sm-5 control-label">{{SC_FEATURE}}</label>
+                <div class="col-sm-7 input-group">
+                    <input class="form-control" value="" type="text">
+                </div>
+            </div>
+            <div class="form-group form-button">
+                <div class="col-sm-offset-4 col-sm-7 input-group">
+                    <button type="button" class="btn btn-primary" id="save" style="margin-right:6px;margin-bottom:6px;">{{SC_OK}}</button>
+                    <button type="button" class="btn btn-default" id="cancel" style="margin-bottom:6px;">{{SC_CANCEL}}</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

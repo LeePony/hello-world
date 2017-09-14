@@ -1,0 +1,64 @@
+@charset "UTF-8";
+// ===========================================================================
+//  页面的菜单组件样式
+// ===========================================================================
+
+.page-menu{
+    color: #444;
+    font-size: $base-font-size + 1;
+    .root-menu{
+        line-height: 1.5em;
+        & > .page-menu-item{
+            user-select: none;
+            transition: color .05s,background-color .25s;
+            border-left: 4px solid transparent;
+            & > .menu-item-cell {
+                position: relative;
+                border-bottom: 1px solid #f0f0f0;
+                cursor:pointer;
+                padding: 1em 30px;
+                i{
+                    width: 1.6em;
+                }
+                .has-child {
+                    position: absolute;
+                    right: 18px;
+                    top: 15px;
+                }
+            }
+            .sub-menu {
+                & > .page-menu-item {
+                    user-select: none;
+                    transition: color .05s,background-color .25s;
+                    & > .menu-item-cell {
+                        border-bottom: 1px solid #f0f0f0;
+                        cursor:pointer;
+                        padding: 1em 28px;
+                        padding-left: 72px;
+                        white-space: pre-wrap;
+                    }
+                    &:hover, &:focus, &.child-active{
+                        & > .menu-item-cell {
+                            @include special-font(1em, C("blue"));
+                        }
+                    }
+                }
+            }
+            &:hover, &:focus, &.active{
+                background-color: #fafafa;
+                border-left: 4px solid C("blue");
+                & > .menu-item-cell {
+                    @include special-font(1em, C("blue"));
+                }
+            }
+        }
+        & > .child-active{
+            background-color: #fafafa;
+            border-left: 4px solid C("blue");
+            & > .menu-item-cell {
+                @include special-font(1em, C("blue"));
+            }
+            
+        }
+    }
+}

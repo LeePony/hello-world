@@ -1,0 +1,27 @@
+<div class="login-tit">{{SC_FORGET_PWD}}</div>
+<div class="login-con">
+	<form class="form-box">
+		<div class="from-group">
+			<p>{{SC_ENTER_NBR_4_FORGET}}</p>
+			<p>{{SC_SEND_MSG_4_FORGET}}</p>
+		</div>
+		<div class="from-group">
+			<input type="text" data-rule="required" id="mobile" class="form-control user-text user-name" name="mobile" placeholder="{{SC_MOBILE_NUMBER}}" maxlength="">
+		</div>
+		<div class="from-group">
+			<input type="text" data-rule="required" id="code" class="form-control user-text user-code" placeholder="{{SC_VER_CODE}}" maxlength="6">
+			<button type="button" id='getFTPwdCode' class="get-Verify-code" >{{SC_GET}}</button>
+		</div>
+		<div class="from-group">
+			<button type="button" id='FTPwdSubmit-btn' class="login-btn">{{SC_SUBMIT}}</button>
+		</div>
+		<div class="from-group">
+			<div class="form-verify">
+				<a href="#" id="signIn">{{SC_BACK_TO_LOGIN}}</a>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="regist-info">
+	<p>{{SC_DONNOT_HAVE_ACCOUNT}} , <a href="#" id="signIn">{{SC_SIGN_UP}} ! </a></p>
+</div>

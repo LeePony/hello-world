@@ -1,0 +1,57 @@
+@charset "UTF-8";
+// ===========================================================================
+//  主页面的统一的盒子模块
+// ===========================================================================
+.box{
+    position: relative;
+    border-radius: 0;
+    background: C("white");
+    border-top: none;
+    width: 100%;
+    box-shadow: none;
+    color: C("darkgray");
+    font-size: 14px;
+    & .usage {
+        background: url(../../images/dian.png) no-repeat left center;
+        padding-left: 16px;
+        @include special-font(1.071em, C("darkgray"));
+        margin-bottom: 26px;
+    }
+    @at-root .box-header{
+        background-color:C("titbgColor");
+        display: block;
+        padding: 1em $main-padding-common;
+        position: relative;
+        & .box-title{
+            display: inline-block;
+            @include special-font(1.143em, C("darkgray"));
+            margin: 0;
+            line-height: 1;
+        }
+    }
+    @at-root .box-body{
+        background-color:C("white");
+        padding: 30px 20px;
+        position:relative;
+        font-size: 14px;
+        @media (max-width: 767px) {
+            padding: 30px 10px;
+        }
+        .group-list {
+            @include clearfix;
+            margin-bottom: 30px;
+        }
+    }
+    @at-root .box-con{
+        border-top: 1px solid C("borderColor");
+        background-color:C("white");
+        font-size: 14px;
+        padding:$main-padding-common;
+        padding-top: 0;
+        position:relative;
+        @media (max-width: 767px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}

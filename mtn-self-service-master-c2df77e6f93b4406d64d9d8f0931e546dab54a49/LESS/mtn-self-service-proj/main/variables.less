@@ -1,0 +1,121 @@
+@charset "UTF-8";
+// ===========================================================================
+//  网站所有布局（宽高）的配置参数
+//  在命名方面可以使用缩写，并且一定要写描述
+//  必要时，附加图片说明
+// ===========================================================================
+
+@base-font-size: 14px;
+
+// PC宽度
+@page-width: 1200px;
+
+// 页面最大最小宽度
+@page-min-width: 308px;
+@page-max-width: 1680px;
+
+// 页面顶部和底部的布局
+@page-header-height: 62px;
+@page-footer-height: 36px;
+
+// 登录页面顶部和底部布局
+@login-header-height: 115px;
+@login-footer-height: 160px;
+
+// 内容区域和顶部/底部区域的间距
+@content-padding-top: 0;
+@content-padding-bottom: 0;
+
+//主内容区域外层内边框
+@main-padding:15px;
+//主内容区域组件的下外边框大小
+@main-magrin-bottom:20px;
+//主内容区域组件的内边框统一设置
+@main-padding-common:20px;
+
+// 页面左侧边栏的布局
+@aside-width: 300px;
+
+// ===========================================================================
+//  字体
+// ===========================================================================
+
+@font: "MyriadProRegular", "OpenSans", "Open Sans","Open-Sans",sans-serif;
+
+// ===========================================================================
+//  配置的颜色
+// ===========================================================================
+
+@defaultBg     :#fff;
+@mainBg        :#ffbe00;
+@tableHeadBg   :#2460a8;
+@contentBg     :#f0f0f0;
+@titleBg       :#4b4b4b;
+
+@mainColor     :#fff;
+@primaryColor  :#f8a125;
+@textColor     :#373737;
+@defaultColor  :#474747;
+@fontColor     :#999;
+@curMenuColor  :#d10101;
+@accentColor   :#ffbe00;
+@pointColor    :#f99e00;
+@hoverColor    :#ffbe00;
+@usableColor   :#709302;
+@borderColor   :#eaeaea;
+@loginInColor  :#e22ba7;
+@menuColor     :#ffbe00;
+@menuBoderColor:#f1f1f1;
+
+// ===========================================================================
+//  用于辅助实现响应式的 mixin
+// ===========================================================================
+
+//统一页面媒体查询断点设置-根据bootstrap4
+
+//max-width
+@max-lg:1199px;
+@max-md:991px;
+@max-sm:767px;
+@max-xs:543px;
+
+//min-with
+@min-lg:1200px;
+@min-md:992px;
+@min-sm:768px;
+@min-xs:544px;
+
+
+//小于等于543--------------------手机端
+//大于等于544小于等于767-------------手机横屏
+//大于等于768小于等于991-------------平板竖屏
+//大于等于992小于等于1199------------pc窄屏
+//大于等于1200-----------------------pc宽屏
+
+//特例pc和平板的分界点
+@max-sp:1024px;
+@min-sp:1025px;
+
+// 混入参数
+
+.clearfix {
+    *zoom: 1;
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+.special-font(@size, @color) {
+    font-size: @size;
+    color:@color;
+    font-weight: 600;
+}
+.ellipsis(@substract:0) {
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    width         : 100% - @substract;
+}

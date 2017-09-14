@@ -1,0 +1,120 @@
+@charset "UTF-8";
+// ===========================================================================
+//  个人信息
+// ===========================================================================
+
+.personal-info-list {
+	max-width: 1200px;
+  	width: auto;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: $main-magrin-bottom 15px;
+	margin-bottom: $main-magrin-bottom;
+	background-color: C("white");
+	color: C("darkgray");
+	font-size: 14px;
+	@media screen and (max-width: 1200px) {
+        margin: $main-magrin-bottom;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 10px;
+		margin: 10px;
+    }
+	.row {
+		line-height: 28px;
+		label {
+			display: inline-block;
+			float: left;
+  			width: 182px;
+			text-align: right;
+			@media screen and (max-width: 1024px) {
+		        width: 50%;
+		    }
+		    & + span {
+			  	padding-left: 6px;
+			}
+		}
+		.first {
+			@media screen and (min-width: 1025px) {
+				width: 27%;
+		        border-right: 1px dotted #c9c9c9;
+		    }
+			& > div {
+				height: 34px;
+				@media screen and (max-width: 1024px) {
+			        height: 42px;
+			        border-bottom: 1px dashed #c9c9c9;
+			    }
+			}
+			.name {
+				overflow: hidden;
+				text-align: center;
+				@media screen and (max-width: 1024px) {
+		        	text-align: center;
+			        height: 30px;
+			        border: none;
+			    }
+				& > span {
+					@include special-font(1.143em, #231f20);
+				}
+				.icon-user {
+					font-size: 1.143em;
+				}
+			}
+			.mobile-num {
+				@include special-font(1.143em, C("blue"));
+			}
+		}
+		.middle {
+			@media screen and (min-width: 1025px) {
+		        width: 46%;
+		    }
+			@media screen and (max-width: 1024px) {
+		        margin-top: 8px;
+		    }
+			& > div {
+				/* height: 34px; */
+    			overflow: hidden;
+				@media screen and (max-width: 1024px) {
+					height: auto;
+					overflow: hidden;
+				}
+				& > span {
+					float: left;
+				    width: 50%;
+				    @media screen and (min-width: 1025px) {
+						overflow: hidden;
+						height: 28px;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
+				}
+			}
+			label {
+				float: left;
+			    width: 50%;
+			}
+		}
+		.last {
+			.shadow {
+				cursor: pointer;
+			}
+			@media screen and (min-width: 1025px) {
+				width: 27%;
+		        border-left: 1px dotted #c9c9c9;
+		    }
+			& > div {
+				height: 34px;
+				& > span {
+					float: left;
+					@media screen and (max-width: $breakpoint-normal) {
+				        width: 50%;
+				    }
+				}
+			}
+			.icon-chakan {
+				font-size: 1.143em;
+			}
+		}
+	}
+}

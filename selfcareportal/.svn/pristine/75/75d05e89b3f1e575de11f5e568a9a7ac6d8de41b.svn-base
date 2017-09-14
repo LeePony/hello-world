@@ -1,0 +1,113 @@
+@charset "UTF-8";
+// ===========================================================================
+//  tabs标签页的样式
+// ===========================================================================
+
+.table-box {
+    margin-bottom: 30px;
+    clear: both;
+    .dataTable {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        thead th {
+            padding: 10px;
+            text-align: left;
+            border-top: 1px solid C("white");
+            border-left: 1px solid C("white");
+            border-bottom: 1px solid C("white");
+            @include special-font($base-font-size, C("darkgray"));
+        }
+        thead tr{
+            background-color:#ffcb0d;
+        }
+        tbody tr {
+            background-color: #f0eeee;
+            &:hover {
+                background-color: #fcf2cd;
+            }
+        }
+        tbody td {
+            padding: 8px 10px;
+            border-top: 1px solid C("white");
+            border-left: 1px solid C("white");
+            color: #333;
+        }
+        @at-root .link-iocn{
+            color: C("default");
+            transition: color .25s;
+            &:hover,&:focus{
+                color: C("blue");
+            }
+        }
+    }
+}
+.ui-jqgrid {
+    border: 1px solid #fff;
+    .ui-jqgrid-view {
+        .ui-jqgrid-hdiv {
+            background: none;
+            border: 1px solid #fff;
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            .ui-jqgrid-htable {
+                background-color: #ffcb0d;
+                .ui-th-column {
+                    padding: 10px;
+                    border-right: 1px solid #fff;
+                    text-align: left;
+                }
+            }
+        }
+        .ui-jqgrid-bdiv {
+            border: 1px solid #fff;
+            .ui-jqgrid-btable tr.jqgrow td {
+                border-bottom: 1px solid #fff;
+                border-right: 1px solid #fff;
+                background-color: #f0eeee;
+                padding: 10px;
+            }
+        }
+    }
+}
+.ui-jqgrid-pager {
+  padding: 10px 0;
+  height: 38px;
+  border: 1px solid #fff;
+}
+.ui-jqgrid-pager .ui-pg-control .pagination > li.gotext > span {
+  padding: 0;
+}
+.ui-inline>div {
+    float: none;
+}
+.pagination > .active > a, .pagination > .active > a:hover {
+  background-color: #ffcb0d;
+  border-color: #ffcb0d;
+}
+
+.pagination li.gotext > span input {
+  margin-right: 0;
+}
+
+.pagination > li.gotext {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+    .ui-jqgrid-pager .ui-pg-control,
+    .pagination>li {
+        float: left;
+        &>a {
+            padding: 6px 12px;
+        }
+    }
+    .pagination>li.pgtext{
+        clear: both;
+        &>span {
+            margin: 0;
+            padding: 4px 0 0 4px;
+        }
+    }
+}

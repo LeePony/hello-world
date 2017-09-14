@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration scan="true" scanPeriod="30 seconds">
+
+	<property name="LOGGER_HOME_IN_R13" value="DEBUG" />
+	<property name="ROOT_LEVEL_IN_R13" value="DEBUG" />
+	<property name="LOGGER_LEVEL_IN_R13" value="DEBUG" />
+	<property name="SQL_LEVEL_IN_R13" value="DEBUG" />
+	<property name="BUSI_LOG_FILE" value="${ZSMART_HOME}/logs/selfcare/selfcare.log"/>
+	<property name="SQL_LOG_FILE" value="${ZSMART_HOME}/logs/selfcare/selfcareSql.log"/>
+	<property name="BFM_LOG_FILE" value="${ZSMART_HOME}/logs/selfcare/selfcareBfm.log"/>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoding>utf-8</encoding>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-4relative %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level
+				%logger{36}- %msg%n</pattern>
+		</layout>
+	</appender>
+
+	<appender name="BUSI_LOG"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoding>utf-8</encoding>
+		<prudent>false</prudent>
+		<append>true</append>
+		<File>${BUSI_LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>${LOGGER_HOME_IN_R13}/selfCare.log.%i.zip
+			</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>50</MaxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>2MB</MaxFileSize>
+		</triggeringPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%-4relative %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level
+				%logger{36}- %msg%n</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="SQL_LOG"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoding>utf-8</encoding>
+		<prudent>false</prudent>
+		<append>true</append>
+		<File>${SQL_LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${LOGGER_HOME_IN_R13}/sql.%d{yyyy-MM-dd}-%i.log
+			</FileNamePattern>
+			<MaxHistory>50</MaxHistory>
+			<TimeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<MaxFileSize>2MB</MaxFileSize>
+			</TimeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%msg%n</pattern>
+		</layout>
+	</appender>
+
+	<appender name="BFM_LOG"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoding>utf-8</encoding>
+		<prudent>false</prudent>
+		<append>true</append>
+		<File>${BFM_LOG_FILE}</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${BFM_LOG_FILE}/sql.%d{yyyy-MM-dd}-%i.log
+			</FileNamePattern>
+			<MaxHistory>50</MaxHistory>
+			<TimeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<MaxFileSize>1MB</MaxFileSize>
+			</TimeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{36}- %msg%n
+			</Pattern>
+		</layout>
+	</appender>
+	<logger name="com.ztesoft.zsmart.bfm" level="${LOGGER_LEVEL_IN_R13}"
+		additivity="false">
+		<appender-ref ref="BFM_LOG" />
+	</logger>
+	<logger name="com.ztesoft.zsmart.bpm" level="${LOGGER_LEVEL_IN_R13}"
+		additivity="false">
+		<appender-ref ref="BFM_LOG" />
+	</logger>
+
+	<root level="${ROOT_LEVEL_IN_R13}">
+		<appender-ref ref="BUSI_LOG" />
+	</root>
+	<logger name="com.ztesoft.zsmart" level="${LOGGER_LEVEL_IN_R13}"
+		additivity="false">
+		<appender-ref ref="BUSI_LOG" />
+	</logger>
+	<logger name="SqlLog" level="${SQL_LEVEL_IN_R13}" additivity="false">
+		<appender-ref ref="SQL_LOG" />
+	</logger>
+
+</configuration>

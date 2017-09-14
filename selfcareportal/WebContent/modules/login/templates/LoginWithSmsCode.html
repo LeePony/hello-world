@@ -1,0 +1,26 @@
+<div class="login-tit">{{SC_LOGIN_WITH_CODE}}</div>
+<div class="login-con">
+	<form class="form-box">
+		<div class="from-group">
+
+		</div>
+		<div class="from-group">
+			<input type="text" id="mobile" class="form-control user-text user-name" data-rule="required" name="mobile" placeholder="{{SC_MOBILE_NUMBER}}" maxlength="">
+		</div>
+		<div class="from-group">
+			<input type="text" id="code" class="form-control user-text user-code" placeholder="{{SC_VER_CODE}}" maxlength="6" data-rule="required">
+			<button type="button" id='getLoginCode' class="get-Verify-code" >{{SC_GET}}</button>
+		</div>
+		<div class="from-group">
+			<button type="button" class="login-btn" id='loginSms_btn'>{{SC_LOGIN}}</button>
+		</div>
+		<div class="from-group">
+			<div class="form-verify">
+				<a href="#" id="signIn">{{SC_BACK_TO_LOGIN}}</a>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="regist-info">
+	<p>{{SC_DONNOT_HAVE_ACCOUNT}} , <a href="#" id="signUp">{{SC_SIGN_UP}} ! </a></p>
+</div>

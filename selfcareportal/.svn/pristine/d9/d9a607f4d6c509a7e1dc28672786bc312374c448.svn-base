@@ -1,0 +1,128 @@
+@charset "UTF-8";
+// ===========================================================================
+//  联系我们
+// ===========================================================================
+.description {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 40px;
+	color: #444;
+    div {
+        position: absolute;
+        left: 0;
+        top: 0;
+        i {
+            font-size: 20px;
+        }
+    }
+    ul {
+        padding-left: 30px;
+        li {
+            margin-bottom: 10px;
+            font-style: italic;
+            padding-left: 12px;
+            font-size: 14px;
+            span {
+                display: inline-block;
+                width: 12px;
+                margin-left: -12px;
+            }
+        }
+    }
+}
+.get-code {
+    display: inline-block;
+    line-height: 32px;
+    padding: 0 10px;
+    background-color: C("boxbgColor");
+    color: C("darkgray");
+    border: 1px solid C("borderColor");
+}
+/* My Trouble Ticket */
+.ticket-list {
+    li {
+        position: relative;
+        margin-bottom: 18px;
+        padding: 10px 18px;
+        background-color: C("boxbgColor");
+        .ticket-title {
+            line-height: 28px;
+            color: C("default");
+            @media (max-width: 480px) {
+                width: 58%;
+            }
+        }
+        .ticket-date {
+            line-height: 28px;
+            color: C("darkgray");
+        }
+        .ticket-description {
+            padding: 18px 0;
+            line-height: 26px;
+            color: C("lightgray");
+        }
+        .ticket-con {
+            @include clearfix;
+            .ticket-con-img {
+                float: left;
+                width: 88px;
+                @media (max-width: 480px) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+            .ticket-con-list {
+                float: left;
+                width: 86%;
+                height: 83px;
+                padding-left: 12px;
+                background: url(../../images/contact-img-bg.png) no-repeat left center;
+                @media (max-width: 767px) {
+                    width: 75%;
+                }
+                @media (max-width: 480px) {
+                    width: 100%;
+                }
+                .content-box {
+                    width: 96%;
+                    height: 83px;
+                    padding: 0 2%;
+                    background-color: C("white");
+                    border-radius: 4px;
+                    .date {
+                        color: C("default");
+                        line-height: 32px;
+                    }
+                    .content {
+                        height: 40px;
+                        overflow: hidden;
+                        color: C("lightgray");
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+        .ticket-btn {
+            position: absolute;
+            right: 16px;
+            top: 8px;
+            a {
+                float: right;
+                color: C("lightgray");
+                padding-top: 2px;
+                padding-left: 8px;
+                &:hover {
+                    color: C("blue");
+                }
+            }
+        }
+    }
+}
+.show-more {
+    width: 100%;
+    text-align: center;
+    a {
+        color: #252525;
+        line-height: 32px;
+    }
+}

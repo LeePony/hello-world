@@ -1,0 +1,28 @@
+@charset "UTF-8";
+// ===========================================================================
+//  网站公用配置变量
+//  非布局非配色的样式可放在此处
+// ===========================================================================
+
+
+// =============================================================
+//  常用字体设置
+// =============================================================
+$georgia: Georgia, Cambria, "Times New Roman", Times, serif !default;
+$helvetica: Arial, "Helvetica Neue", Helvetica, Roboto, sans-serif !default;
+$lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif !default;
+$monospace: "Bitstream Vera Sans Mono", Monaco, "Courier New", Consolas, Courier, monospace !default;
+$verdana: Verdana, Geneva, sans-serif !default;
+
+// 默认的中英文字体（正文字体）
+$zh-font: "Microsoft YaHei", 微软雅黑, "宋体", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$en-font: $helvetica;
+
+//$font: "Helvetica Neue", Helvetica, Roboto, "Microsoft YaHei", "微软雅黑", Arial, sans-serif !default;
+
+$font: "Open Sans", "Microsoft YaHei", "微软雅黑", Arial, sans-serif !default;
+
+
+// 过渡动画默认持续的时长
+$transition-duration: 0.2s;
+

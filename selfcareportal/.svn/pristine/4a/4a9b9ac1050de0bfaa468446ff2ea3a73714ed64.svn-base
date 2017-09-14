@@ -1,0 +1,14 @@
+<div class="login-wrapper-box">
+    <div class="login-wrapper">
+        <header id="header" class="login-header"><a href="#"><img src="images/logo.png" alt=""></a></header>
+        <div class="login-box">
+            <div id="loginForm" class="login-form-wrapper"></div>
+        </div>
+    </div>
+    <footer id="footer" class="login-footer">
+        <!--  <div class="copyright">
+            <div>Copyright 2014 MPT. All Rights Reserved. ZTEsoft provide technical support services</div>
+            <div>Recommended browsers IE9, IE10, IE11, Firefox, Safari, Opera, Chrome</div>
+        </div>-->
+    </footer>
+</div>

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+// ===========================================================================
+//  登录页面布局的样式
+// ===========================================================================
+.webpage-wrapper-login {
+	background: url(../../images/login-ad.jpg) no-repeat right bottom 50px;
+	background-size: cover;
+}
+.login-wrapper-box {
+	.login-wrapper {
+		width: 1200px;
+		margin: 0 auto;
+		min-height: 600px;
+		@media screen and (max-width: $breakpoint-normal) {
+			width: 100%;
+		}
+		.login-header {
+			height: $login-header-height;
+			padding-top:20px;
+			padding-left: 3%;
+			@media screen and (min-width: $breakpoint-small) {
+			    height: 120px;
+			}
+			@media screen and (max-width: $breakpoint-xsmall) {
+			    width: 90%;
+				img {
+				    width: 100%;
+				}
+			}
+		}
+	}
+	.login-box {
+		width: 100%;
+		padding: 0 2%;
+		overflow-y: hidden;
+	}
+	.login-footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		border-top: 50px solid #282828;
+	}
+}

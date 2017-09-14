@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+.ui-dialog {
+    .modal-header {
+        background-color: #4b4b4b;
+    }
+    .modal-body {
+        padding: 20px;
+    }
+    .modal-footer {
+        padding: 0 20px 20px;
+        border-top: 0;
+        text-align: center;
+    }
+    &.modal-success,
+    &.modal-warning,
+    &.modal-danger,
+    &.modal-confirm,
+    &.modal-info {
+        border: 0;
+        .modal-header {
+            border: 0;
+            position: relative;
+            height: 80px;
+            .modal-title {
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                margin-left: -25px;
+                background: transparent url(../../../image/alert_info_small.gif) no-repeat;
+                width: 50px;
+                height: 50px;
+                color: transparent;
+                font-size: 0;
+            }
+            .glyphicon {
+                display: none;
+            }
+            .close {
+                margin-top: -6px;
+                color: #8a8a8a;
+            }
+        }
+        .modal-body {
+            text-align: center;
+            font-size: @base-font-size + 2;
+            color: #000;
+            word-wrap: break-word;
+            & > .iconfont {
+                opacity: 0;
+                display: none;
+            }
+            .modal-message {
+                margin: 0;
+            }
+        }
+        .modal-footer {
+            text-align: center;
+            padding-top: 5px;
+        }
+
+    }
+    &.modal-info {
+        .modal-header .modal-title { background-image: url(../../../image/alert_info_small.gif); }
+    }
+    &.modal-success {
+        .modal-header .modal-title { background-image: url(../../../image/alert_success_small-once.gif); }
+    }
+    &.modal-warning {
+        .modal-header .modal-title { background-image: url(../../../image/alert_warning_small.gif); }
+    }
+    &.modal-danger {
+        .modal-header .modal-title { background-image: url(../../../image/alert_error_small.gif); }
+    }
+    &.modal-confirm {
+        .modal-header .modal-title { background-image: url(../../../image/alert_error_small.gif); }
+        .modal-body .form-control{
+            margin-top: 10px;
+        }
+        .modal-footer .btn-default {
+            margin-left: 10px;
+        }
+        .modal-footer .btn-primary {
+            background-color: #e24934;
+            border-color: #e24934;
+            color: #fff;
+            &:hover {
+                background-color: lighten(#e24934, 10%);
+                border-color: #e24934;
+            }
+        }
+    }
+}

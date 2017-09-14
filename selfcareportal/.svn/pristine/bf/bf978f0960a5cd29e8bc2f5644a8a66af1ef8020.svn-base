@@ -1,0 +1,35 @@
+{
+  "name": "style-sass",
+  "version": "0.1.0",
+  "description": "Sass Boilerplate.",
+  "author": "zhang.han113@zte.com.cn",
+  "license": "MIT",
+  "scripts": {
+    "watch": "gulp",
+    "compile": "gulp compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.ztesoft.com/boot/style-sass.git"
+  },
+  "keywords": [
+    "sass",
+    "style",
+    "architecture",
+    "boilerplate"
+  ],
+  "devDependencies": {
+    "amd-optimize": "^0.6.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-clean-css": "^2.0.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^1.0.5",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3"
+  }
+}

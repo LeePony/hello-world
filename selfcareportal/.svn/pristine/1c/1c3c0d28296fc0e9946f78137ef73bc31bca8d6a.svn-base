@@ -1,0 +1,62 @@
+@charset "UTF-8";
+// ===========================================================================
+//  Customer Profile
+// ===========================================================================
+.carrousel {
+    display: none;
+    position: fixed;
+    background-color: rgba(10, 10, 10, 0.8);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    .wrapper {
+        width: 800px;
+        /*height: 600px;*/
+        overflow: hidden;
+        margin: auto;
+        position: absolute;
+        text-align: center;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @media (max-width: $breakpoint-small) {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+.close-enlarge {
+    position: absolute;
+    right: 30px;
+    top: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+}
+.fileinput-container {
+    margin-bottom: 20px;
+    .fileinput-pick {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        background: #F2F2F2;
+        box-shadow: 5px 5px 5px #EDEDED;
+    }
+    .info {
+        text-align: center;
+        line-height: 30px;
+    }
+    .enlarge-img {
+        cursor: pointer;
+        padding-top: 10px;
+    }
+}
+.fileinput-input {
+    width: 100%;
+}

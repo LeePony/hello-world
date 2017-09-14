@@ -1,0 +1,54 @@
+@charset "UTF-8";
+// ===========================================================================
+//  tabs标签页的样式
+// ===========================================================================
+
+.ui-tabs {
+    border: none;
+    .ui-tabs-nav {
+        height: 50px;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        li {
+            height: 50px;
+            padding-top: 8px;
+            border: 0;
+            a {
+                color: #666;
+            }
+            &.ui-tabs-active {
+                border-top: 0;
+                border-bottom: 3px solid #024ea2;
+                a {
+                    color: #024ea2;
+                    font-weight: 600;
+                    &:hover {
+                        color: #024ea2;
+                    }
+                }
+            }
+            &.ui-tabs-paging-prev {
+                left: -6px;
+                z-index: 99;
+            }
+            &.ui-tabs-paging-next {
+                right: -6px;
+            }
+            &.ui-tabs-paging-next, 
+            &.ui-tabs-paging-prev {
+                position: absolute;
+                top: 2px;
+                padding-top: 0;
+                background: #fff;
+                height: 44px;
+                a {
+                    font-size: 28px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .ui-tabs-panel {
+        padding: 30px 0;
+    }
+}

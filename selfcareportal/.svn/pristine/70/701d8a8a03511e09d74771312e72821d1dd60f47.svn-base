@@ -1,0 +1,114 @@
+@charset "UTF-8";
+// ===========================================================================
+//  主页面Overview模块用户咨询组件的样式
+// ===========================================================================
+
+.querylist-group{
+    float: left;
+    width: 100%;
+    background-color: #efefef;
+    font-size: 14px;
+    & > .querylist{
+        float: left;
+        width: 49%;
+        height: 141px;
+        margin-right: 2%;
+        margin-bottom: $main-magrin-bottom;
+        padding: $main-padding-common;
+        @include clearfix;
+        @media screen and (max-width: 767px) {
+            height: 132px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+            margin-right: 0;
+        }
+        & .querylist-text{
+            display: block;
+            line-height: 1.5;
+            @include ellipsis;
+            @include special-font(1.143em, C("darkgray"));
+        }
+        & .querylist-number{
+            display: block;
+            line-height: 2;
+            @include ellipsis;
+            @include special-font(1.714em, C("lightorage"));
+            @media screen and (max-width: 767px) {
+                line-height: 1.5;
+            }
+            @media screen and (min-width: 767px) and (max-width: 1024px) {
+                font-size: 1.54em;
+            }
+        }
+        & .querylist-btn{
+            width: 100%;
+            height: 36px;
+            @include special-font(1em, C("white"));
+            background-color: C("blue");
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            margin-top: 4px;
+            line-height: 2;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            min-width: 100px;
+            max-width: 300px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            transition: color .05s,background-color .25s;
+            border-radius: 4px;
+            &:hover,&:focus,&:active{
+                background-color: #02458f;
+            }
+        }
+    }
+
+    & > .Balance {
+        background-color: C("lightyellow");
+    }
+    & > .Fee {
+        background-color: C("lightblue");
+        margin-right: 0;
+    }
+    & > .Points {
+        background-color: C("lightgreen");
+    }
+    & > .overview-img {
+        position: relative;
+        float: left;
+        width: 25%;
+        height: 141px;
+        margin-right: 0;
+        margin-bottom: $main-magrin-bottom;
+        background: #fdf0c4 url(../../images/overview1.png) no-repeat right center;
+        @media screen and (max-width: 767px) {
+            width: 49%;
+            height: 132px;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+        }
+        a {
+            position: absolute;
+            right: 0;
+            bottom: 22px;
+            background: #f9a514;
+            color: #fff;
+            padding: 7px 12px;
+            font-size: 0.929em;
+            font-weight: 600;
+            border-radius: 4px;
+            @media screen and (max-width: 767px) {
+                bottom: 14px;
+            }
+        }
+    }
+}
